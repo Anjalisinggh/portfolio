@@ -51,12 +51,15 @@ function App() {
 
       {/* Sections */}
       <section id="home" className="section">
-        <h1 className="fade-in">Hi, Anjali here</h1>
+        
         <div className="svg">
           <img src="/codesandbox.svg" alt="icon" />
           <img src="/code.svg" alt="icon" />
           <img src="/gitlab.svg" alt="icon" />
         </div>
+
+        <h1 className="fade-in">Hi, Anjali here</h1>
+        
       </section>
 
       <section id="about" className="section about-section">
@@ -66,14 +69,92 @@ function App() {
             <p>I’m a web developer and UI/UX designer who loves clean design and cool code.</p>
           </div>
           <div className="gif-container">
-            <img src="/Coding.gif" alt="Coding Animation" className="gif" />
+            <img src="/coding.gif" alt="Coding Animation" className="gif" />
           </div>
         </div>
       </section>
 
       <section id="projects" className="section">
         <h2>Projects</h2>
-        <p>Check out Museek, Vibra, EcoSnap and more.</p>
+       <div>
+ 
+  <div className="project-grid">
+    <div className="card" data-animate="">
+      <img src="/vibra.jpg" alt="Vibra" />
+      <div className="card-body">
+        <h5 className="card-title">Vibra (Ongoing)</h5>
+        <p className="card-text">
+          A full-stack music app with anonymous messages{" "}
+        </p>
+        <a href="https://vibra-mu.vercel.app/" className="btn"target="_blank" rel="noopener noreferrer">
+          View Project
+        </a>
+      </div>
+    </div>
+    <div className="card" data-animate="">
+      <img src="/todo.jpg" alt="ToDo" />
+      <div className="card-body">
+        <h5 className="card-title">ToDo</h5>
+        <p className="card-text">
+          A minimal task manager with local storage support.
+        </p>
+        <a href="https://todo-cyan-pi.vercel.app/" className="btn"target="_blank" rel="noopener noreferrer">
+          View Project
+        </a>
+      </div>
+    </div>
+    <div className="card" data-animate="">
+      <img src="/museek.jpg" alt="Museek" />
+      <div className="card-body">
+        <h5 className="card-title">Museek</h5>
+        <p className="card-text">
+          A modern UI music app inspired by Spotify with custom themes.
+        </p>
+        <a href="https://museek-ten.vercel.app/" className="btn"target="_blank" rel="noopener noreferrer">
+          View Project
+        </a>
+      </div>
+    </div>
+    <div className="card" data-animate="">
+      <img src="/kaizen.jpg" alt="Kaizen Arts" />
+      <div className="card-body">
+        <h5 className="card-title">Kaizen Arts</h5>
+        <p className="card-text">
+          Developed an AI-powered AR app that uses facial detection to recommend
+          earring styles based on individual features and preferences.
+        </p>
+        <a href="https://github.com/Anjalisinggh/kaizenArts" className="btn"target="_blank" rel="noopener noreferrer">
+          View Project
+        </a>
+      </div>
+    </div>
+    <div className="card" data-animate="">
+      <img src="/adapity.png" alt="Adapity" />
+      <div className="card-body">
+        <h5 className="card-title">Adapity</h5>
+        <p className="card-text">
+          An accessible design system for scalable UI development.
+        </p>
+        <a href="https://adaptify-zeta.vercel.app/" className="btn"target="_blank" rel="noopener noreferrer">
+          View Project
+        </a>
+      </div>
+    </div>
+    <div className="card" data-animate="">
+      <img src="/traffic.jpg" alt="Traffic Prom" />
+      <div className="card-body">
+        <h5 className="card-title">Traffic Prom</h5>
+        <p className="card-text">
+          Smart signal simulation with responsive UI and animations.
+        </p>
+        <a href="https://github.com/Anjalisinggh/Traffic-prom" className="btn"target="_blank" rel="noopener noreferrer">
+          View Project
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
       </section>
 
       <section id="contact" className="section">

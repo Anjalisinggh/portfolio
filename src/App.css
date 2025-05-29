@@ -71,7 +71,6 @@ html {
     color: #000;
     display: block;
     cursor: pointer;
-    
     right: 20px;
     position: absolute;
    
@@ -106,13 +105,12 @@ html {
 
 /* Section Styling */
 .section {
-  min-height: 100vh;
-  padding: 100px 20px;
-  color: #2c1e2f;
+ min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 /* SVG Animation */
@@ -124,14 +122,6 @@ html {
   opacity: 0;
 }
 
-.svg img {
-  width: 40px;
-  height: auto;
-  transition: transform 0.3s ease;
-  cursor: pointer;
-  border-radius: 50%;
-  box-shadow: 0 8px 16px rgba(140, 80, 150, 0.2);
-}
 
 /* Fade In Text */
 .fade-in {
@@ -141,7 +131,7 @@ html {
   font-size: 2rem;
   color: #2c1e2f;
   margin-top: 20px;
-}
+} 
 
 /* About Section */
 .about-section {
@@ -179,11 +169,13 @@ html {
 .gif-container {
   flex: 1;
   display: flex;
+  
   justify-content: center;
 }
 
 .gif {
-  max-width: 100%;
+  width: 50%;
+  background-color: #e9c8e8;
   height: 80%;
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -221,4 +213,73 @@ html {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Project Section */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1.25rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.btn {
+  background-color: #4b6cb7;
+  background-image: linear-gradient(to right, #4b6cb7, #182848);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 0.6rem;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-image: linear-gradient(to right, #182848, #4b6cb7);
 }
