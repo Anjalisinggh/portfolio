@@ -66,7 +66,7 @@ function App() {
             <p>I’m a web developer and UI/UX designer who loves clean design and cool code.</p>
           </div>
           <div className="gif-container">
-            <img src="coding.gif" alt="Coding Animation" className="gif" />
+            <img src="/Coding.gif" alt="Coding Animation" className="gif" />
           </div>
         </div>
       </section>

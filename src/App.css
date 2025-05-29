@@ -31,6 +31,8 @@ html {
 }
 
 .navbar-left {
+  display: flex;
+  align-items: center;
   font-weight: bold;
   font-size: 1.2rem;
   color: #3d2b4a;
@@ -60,11 +62,19 @@ html {
   display: none;
   font-size: 1.5rem;
   cursor: pointer;
+  
+  
 }
 
 @media (max-width: 768px) {
   .hamburger {
+    color: #000;
     display: block;
+    cursor: pointer;
+    
+    right: 20px;
+    position: absolute;
+   
   }
 
   .navbar-right {
