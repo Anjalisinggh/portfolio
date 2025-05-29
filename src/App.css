@@ -215,6 +215,7 @@ html {
   }
 }
 
+
 /* Project Section */
 .project-grid {
   display: grid;
@@ -283,3 +284,44 @@ html {
 .btn:hover {
   background-image: linear-gradient(to right, #182848, #4b6cb7);
 }
+
+
+/* about us section */
+
+
+
+.contact-container h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-container p {
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.contact-link {
+  position: relative;
+  display: inline-block;
+}
+
+.contact-icon {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.contact-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Tooltip shown via `title` attribute by default on hover */
+
