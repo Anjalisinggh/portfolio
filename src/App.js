@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 
 function App() {
   const [activeSection, setActiveSection] = useState("home");
+  const [menuOpen, setMenuOpen] = useState(false); // New state
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,20 +19,26 @@ function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+
   return (
     <>
-      {/* Fixed Navbar */}
+      {/* Navbar */}
       <nav className="navbar fixed-top shadow-sm">
         <div className="container">
           <div className="navbar-left">Anjali Singh</div>
-          <div className="navbar-right">
+          
+          <div className="hamburger" onClick={toggleMenu}>
+            ☰
+          </div>
+
+          <div className={`navbar-right ${menuOpen ? 'open' : ''}`}>
             {["home", "about", "projects", "contact"].map((section) => (
               <a
                 key={section}
                 href={`#${section}`}
-                className={`nav-link ${
-                  activeSection === section ? "active" : ""
-                }`}
+                className={`nav-link ${activeSection === section ? "active" : ""}`}
+                onClick={() => setMenuOpen(false)} // Close menu on click
               >
                 {section.charAt(0).toUpperCase() + section.slice(1)}
               </a>
@@ -39,6 +46,8 @@ function App() {
           </div>
         </div>
       </nav>
+
+      
 
       {/* Sections */}
       <section id="home" className="section">
