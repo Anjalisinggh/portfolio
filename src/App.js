@@ -196,6 +196,7 @@ function App() {
       target="_blank"
       rel="noopener noreferrer"
       className="contact-link"
+      data-tooltip="Instagram"
       title="Instagram"
     >
       <img src="/instagram.svg" alt="Insta Icon" className="contact-icon" />
@@ -205,6 +206,7 @@ function App() {
       href="https://github.com/Anjalisinggh"
       target="_blank"
       rel="noopener noreferrer"
+      data-tooltip="GitHub"
       className="contact-link"
       title="GitHub"
     >
@@ -216,6 +218,7 @@ function App() {
       target="_blank"
       rel="noopener noreferrer"
       className="contact-link"
+      data-tooltip="LinkedIn"
       title="LinkedIn"
     >
       <img src="/linkedin.svg" alt="LinkedIn Icon" className="contact-icon" />
@@ -224,6 +227,7 @@ function App() {
     <a
       href="mailto:anjalisinggh.12@gmail.com"
       className="contact-link"
+      data-tooltip="Gmail"
       title="Gmail"
     >
       <img src="/message-square.svg" alt="Gmail Icon" className="contact-icon" />
@@ -234,6 +238,7 @@ function App() {
       target="_blank"
       rel="noopener noreferrer"
       className="contact-link"
+      data-tooltip="Twitter"
       title="Twitter"
     >
       <img src="/twitter.svg" alt="Twitter Icon" className="contact-icon" />

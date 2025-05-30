@@ -188,7 +188,7 @@ html {
   }
 
   .gif-container {
-    margin-top: 20px;
+    margin-top: 50%;
   }
 }
 
@@ -325,3 +325,32 @@ html {
 
 /* Tooltip shown via `title` attribute by default on hover */
 
+.contact-link {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip styling */
+.contact-link::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  border-radius: 5px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 10;
+}
+
+/* Show tooltip on hover */
+.contact-link:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-5px);
+}
