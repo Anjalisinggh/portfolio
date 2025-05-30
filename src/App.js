@@ -102,7 +102,7 @@ function App() {
       </p>
     </div>
     <div className="gif-container">
-      <img src="/Coding.gif" alt="Coding Animation" className="gif" />
+      <img src="/hello.gif" alt="Coding Animation" className="gif" />
     </div>
   </div>
 </section>

@@ -52,7 +52,7 @@ background-image: radial-gradient(circle, #132e4b, #1b3954, #23445e, #2d4f67, #3
 
 .nav-link.active {
   font-weight: bold;
-  color: #8215dc;
+  color: #e2dfe4;
   border-bottom: 2px solid #6b21a8;
 }
 
@@ -108,7 +108,7 @@ background-image: radial-gradient(circle, #132e4b, #1b3954, #23445e, #2d4f67, #3
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  
  
 }
 
@@ -204,7 +204,7 @@ background-image: radial-gradient(circle, #132e4b, #1b3954, #23445e, #2d4f67, #3
   }
 
   .profile {
-    margin-top: 20%;
+    
   }
 }
 
@@ -254,7 +254,7 @@ background-image: radial-gradient(circle, #132e4b, #1b3954, #23445e, #2d4f67, #3
 .gif {
   width: 50%;
   background-color: #afbdd0;
-  height: 80%;
+  height: 60%;
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
@@ -271,7 +271,7 @@ background-image: radial-gradient(circle, #132e4b, #1b3954, #23445e, #2d4f67, #3
   }
 
   .gif {
-    width: 80%;
+    width: 50%;
   }
 }
 
@@ -289,7 +289,7 @@ background-image: radial-gradient(circle, #132e4b, #1b3954, #23445e, #2d4f67, #3
 }
 
 .card {
-  background: #bfc3d9;
+  background: #a2a6c0;
   border-radius: 1rem;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
   overflow: hidden;
