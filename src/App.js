@@ -52,6 +52,15 @@ function App() {
       {/* Sections */}
    <section id="home" className="section">
   <div className="content-container">
+
+ <div className="profile">
+      <img
+        src="/anjali.jpg"
+        alt="Anjali Singh"
+        className="profile-image fade-in"
+      />
+    </div>
+
     {/* Left Content */}
     <div className="left-content">
       <div className="svg">
@@ -63,31 +72,31 @@ function App() {
     </div>
 
     {/* Profile on the Right */}
-    <div className="profile">
-      <img
-        src="/anjali.jpg"
-        alt="Anjali Singh"
-        className="profile-image fade-in"
-      />
-    </div>
+   
   </div>
 </section>
 
 
-      <section id="about" className="section about-section">
-        <div className="about-content">
-          <div className="profile-info">
-            <h2>About Me</h2>
-            <p>
-              I’m a web developer and UI/UX designer who loves clean design and
-              cool code.
-            </p>
-          </div>
-          <div className="gif-container">
-            <img src="/Coding.gif" alt="Coding Animation" className="gif" />
-          </div>
-        </div>
-      </section>
+<section id="about" className="section about-section">
+  <div className="about-content">
+    <div className="profile-info fade-in">
+      <h2>About Me</h2>
+      <p>
+        Hi, I’m <strong>Anjali Singh</strong> — a web developer and UI designer from Mumbai, recently graduated with a BSc in IT. I love crafting creative, user-focused digital experiences.
+      </p>
+      <p>
+        From developing an AR-based earring try-on app (<strong>Kaizen Arts</strong>) to building emotion-driven platforms like <strong>Museek</strong> and <strong>Vibra</strong>, I bring ideas to life through clean code and expressive design. I’ve also gained hands-on experience at <strong>IBM</strong> as a front-end intern.
+      </p>
+      <p>
+        Skilled in <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, <strong>React</strong>, and <strong>Figma</strong> — I’m always exploring new tech to build things that matter.
+      </p>
+    </div>
+    <div className="gif-container">
+      <img src="/Coding.gif" alt="Coding Animation" className="gif" />
+    </div>
+  </div>
+</section>
+
 
       <section id="projects" className="section">
         <h2>Projects</h2>
