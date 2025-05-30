@@ -1,9 +1,19 @@
 import "./App.css";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { useEffect, useState } from "react";
 
 function App() {
   const [activeSection, setActiveSection] = useState("home");
   const [menuOpen, setMenuOpen] = useState(false); // New state
+
+  useEffect(() => {
+  AOS.init({
+    duration: 1000,
+    once: true, // animation happens only once when scrolling down
+  });
+}, []);
+
 
   useEffect(() => {
     const handleScroll = () => {
