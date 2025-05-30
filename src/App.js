@@ -50,15 +50,29 @@ function App() {
       </nav>
 
       {/* Sections */}
-      <section id="home" className="section">
-        <div className="svg">
-          <img src="/codesandbox.svg" alt="icon" />
-          <img src="/code.svg" alt="icon" />
-          <img src="/gitlab.svg" alt="icon" />
-        </div>
+   <section id="home" className="section">
+  <div className="content-container">
+    {/* Left Content */}
+    <div className="left-content">
+      <div className="svg">
+        <img src="/codesandbox.svg" alt="icon" />
+        <img src="/code.svg" alt="icon" />
+        <img src="/gitlab.svg" alt="icon" />
+      </div>
+      <h1 className="fade-in">Hi, Anjali here</h1>
+    </div>
 
-        <h1 className="fade-in">Hi, Anjali here</h1>
-      </section>
+    {/* Profile on the Right */}
+    <div className="profile">
+      <img
+        src="/anjali.jpg"
+        alt="Anjali Singh"
+        className="profile-image fade-in"
+      />
+    </div>
+  </div>
+</section>
+
 
       <section id="about" className="section about-section">
         <div className="about-content">
@@ -189,7 +203,7 @@ function App() {
 
      <section id="contact" className="section contact-container">
   <h2>Contact</h2>
-  <p>Let’s build something awesome! 📬</p>
+  <p> Have a project in mind? Let's chat ✨</p>
   <div className="contact-icons">
     <a
       href="https://www.instagram.com/anjalisinggh_12/"
@@ -197,7 +211,7 @@ function App() {
       rel="noopener noreferrer"
       className="contact-link"
       data-tooltip="Instagram"
-      title="Instagram"
+      
     >
       <img src="/instagram.svg" alt="Insta Icon" className="contact-icon" />
     </a>
@@ -208,7 +222,7 @@ function App() {
       rel="noopener noreferrer"
       data-tooltip="GitHub"
       className="contact-link"
-      title="GitHub"
+     
     >
       <img src="/github.svg" alt="GitHub Icon" className="contact-icon" />
     </a>
@@ -219,7 +233,7 @@ function App() {
       rel="noopener noreferrer"
       className="contact-link"
       data-tooltip="LinkedIn"
-      title="LinkedIn"
+     
     >
       <img src="/linkedin.svg" alt="LinkedIn Icon" className="contact-icon" />
     </a>
@@ -228,18 +242,18 @@ function App() {
       href="mailto:anjalisinggh.12@gmail.com"
       className="contact-link"
       data-tooltip="Gmail"
-      title="Gmail"
+      
     >
       <img src="/message-square.svg" alt="Gmail Icon" className="contact-icon" />
     </a>
 
     <a
-      href="https://x.com/i/flow/login?redirect_after_login=%2Fanjalisinggh12"
+      href=" https://x.com/anjalisinggh12?t=7C4F4VoZQBtreAbIsOFFYg&s=08"
       target="_blank"
       rel="noopener noreferrer"
       className="contact-link"
       data-tooltip="Twitter"
-      title="Twitter"
+     
     >
       <img src="/twitter.svg" alt="Twitter Icon" className="contact-icon" />
     </a>

@@ -2,11 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
-background-image: radial-gradient(circle, #83b3fa, #6d91d6, #5770b2, #42518f, #2d336d);
-  background-size: cover;
-  background-attachment: fixed;
-  color: #2c1e2f;
-}
+background-image: linear-gradient(to left bottom, #132e4b, #1b3954, #23445e, #2d4f67, #375b70);}
 html {
   scroll-behavior: smooth;
 }
@@ -19,8 +15,7 @@ html {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-background-image: linear-gradient(to right top, #83b3fa, #6d91d6, #5770b2, #42518f, #2d336d);
- z-index: 1000;
+background-image: radial-gradient(circle, #132e4b, #1b3954, #23445e, #2d4f67, #375b70); z-index: 1000;
  
 }
 
@@ -85,7 +80,7 @@ background-image: linear-gradient(to right top, #83b3fa, #6d91d6, #5770b2, #4251
     display: none;
     flex-direction: column;
     align-items: flex-start;
-    background-color: #100f10;
+    background-color: #acb4d1;
     position: absolute;
     top: 60px;
     right: 20px;
@@ -138,63 +133,20 @@ background-image: linear-gradient(to right top, #83b3fa, #6d91d6, #5770b2, #4251
   margin-top: 20px;
 } 
 
-/* About Section */
-.about-section {
+.profile {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 100px 40px;
-}
-
-.about-content {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-  max-width: 1200px;
-  width: 100%;
-}
-
-.profile-info {
+  justify-content: flex-end;
+  align-items: right;
+  flex-direction: column;
   flex: 1;
-  color: #3d2b4a;
 }
 
-.profile-info h2 {
-  font-size: 2.5rem;
+.profile-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 20%;
+ 
   margin-bottom: 20px;
-}
-
-.profile-info p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-}
-
-.gif-container {
-  flex: 1;
-  display: flex;
-  
-  justify-content: center;
-}
-
-.gif {
-  width: 50%;
-  background-color: #afbdd0;
-  height: 80%;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
-@media (max-width: 768px) {
-  .about-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .gif-container {
-    margin-top: 50%;
-  }
 }
 
 /* Animations */
@@ -221,6 +173,61 @@ background-image: linear-gradient(to right top, #83b3fa, #6d91d6, #5770b2, #4251
 }
 
 
+/* About Section */
+.about-section {
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(to right top, #132e4b, #1b3954, #23445e, #2d4f67, #375b70);
+  align-items: center;
+  padding: 100px 40px;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.profile-info {
+  flex: 1;
+  color: #0b0b0b;
+}
+
+.profile-info h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.profile-info p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.gif-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gif {
+  width: 50%;
+  background-color: #afbdd0;
+  height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+/*-------------------*/
+
 /* Project Section */
 .project-grid {
   display: grid;
@@ -246,7 +253,7 @@ background-image: linear-gradient(to right top, #83b3fa, #6d91d6, #5770b2, #4251
 }
 
 .card img {
-  margin-top: 1rem;
+  
   width: 100%;
   height: 200px;
   object-fit: cover;
@@ -263,13 +270,13 @@ background-image: linear-gradient(to right top, #83b3fa, #6d91d6, #5770b2, #4251
 .card-title {
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
-  color: #333;
+  color: #050412;
   font-weight: 600;
 }
 
 .card-text {
   font-size: 0.95rem;
-  color: #666;
+  color: #433f3f;
   margin-bottom: 1rem;
   flex-grow: 1;
 }
@@ -291,19 +298,25 @@ background-image: linear-gradient(to right top, #83b3fa, #6d91d6, #5770b2, #4251
   background-image: linear-gradient(to right, #182848, #4b6cb7);
 }
 
+/*-------------------*/
+/* contact section */
 
-/* about us section */
-
-
+.contact-container{
+ background-image: linear-gradient(to right top, #132e4b, #1b3954, #23445e, #2d4f67, #375b70);
+}
 
 .contact-container h2 {
   font-size: 2rem;
+  color: antiquewhite;
   margin-bottom: 0.5rem;
 }
 
 .contact-container p {
   margin-bottom: 1.5rem;
-  color: #555;
+ background-image: radial-gradient(circle, #132e4b, #1b3954, #23445e, #2d4f67, #375b70);
+  color: #fffcfc;
+padding: auto;
+box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .contact-icons {
@@ -311,6 +324,7 @@ background-image: linear-gradient(to right top, #83b3fa, #6d91d6, #5770b2, #4251
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
+  padding: 20px;
 }
 
 .contact-link {
@@ -331,10 +345,6 @@ background-image: linear-gradient(to right top, #83b3fa, #6d91d6, #5770b2, #4251
 
 /* Tooltip shown via `title` attribute by default on hover */
 
-.contact-link {
-  position: relative;
-  display: inline-block;
-}
 
 /* Tooltip styling */
 .contact-link::after {
