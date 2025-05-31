@@ -32,7 +32,7 @@ function App() {
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
-    <>
+    <div className="App">
       {/* Navbar */}
       <nav className="navbar fixed-top shadow-sm">
         <div className="container">
@@ -279,7 +279,7 @@ function App() {
   </div>
 </section>
 
-    </>
+    </div>
   );
 }
 
