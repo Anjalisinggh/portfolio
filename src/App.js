@@ -183,14 +183,14 @@ function App() {
               </div>
             </div>
             <div className="card" data-animate="">
-              <img src="/adapity.png" alt="Adapity" />
+              <img src="/skyteller.png" alt="Sky Teller" />
               <div className="card-body">
-                <h5 className="card-title">Adapity</h5>
+                <h5 className="card-title">Sky SkyTeller</h5>
                 <p className="card-text">
-                  An accessible design system for scalable UI development.
+                 SkyTeller, a weather forecasting web app that presents real-time weather updates alongside creative, fortune-style messages. Focused on delivering a clean, responsive user interface with an engaging and interactive experience.
                 </p>
                 <a
-                  href="https://adaptify-zeta.vercel.app/"
+                  href="https://sky-teller.vercel.app/"
                   className="btn"
                   target="_blank"
                   rel="noopener noreferrer"
