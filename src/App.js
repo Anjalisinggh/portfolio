@@ -185,7 +185,7 @@ function App() {
             <div className="card" data-animate="">
               <img src="/skyteller.png" alt="Sky Teller" />
               <div className="card-body">
-                <h5 className="card-title">Sky SkyTeller</h5>
+                <h5 className="card-title">Sky Teller</h5>
                 <p className="card-text">
                  SkyTeller, a weather forecasting web app that presents real-time weather updates alongside creative, fortune-style messages. Focused on delivering a clean, responsive user interface with an engaging and interactive experience.
                 </p>
@@ -200,14 +200,17 @@ function App() {
               </div>
             </div>
             <div className="card" data-animate="">
-              <img src="/traffic.jpg" alt="Traffic Prom" />
+              <img src="/safetrip.png" alt="Traffic Prom" />
               <div className="card-body">
-                <h5 className="card-title">Traffic Prom</h5>
+                <h5 className="card-title">Safe Trip</h5>
                 <p className="card-text">
-                  Smart signal simulation with responsive UI and animations.
+                
+
+SafeTrip is a React-based web app that helps users plan safer travel routes by visualizing real-time crime data on an interactive map. It alerts users about high-risk areas along their selected path using heatmaps and location tracking.
+
                 </p>
                 <a
-                  href="https://github.com/Anjalisinggh/Traffic-prom"
+                  href="https://safetrip-neon.vercel.app/"
                   className="btn"
                   target="_blank"
                   rel="noopener noreferrer"
