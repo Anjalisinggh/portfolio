@@ -1,7 +1,10 @@
 import "./App.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import ParticleBackground from "./ParticleBackground";
 import { useEffect, useState } from "react";
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const [activeSection, setActiveSection] = useState("home");
@@ -32,6 +35,9 @@ function App() {
 
   return (
     <div className="App">
+
+     <ParticleBackground />
+         
       {/* Navbar */}
       <nav className="navbar fixed-top shadow-sm">
         <div className="container">
@@ -57,6 +63,7 @@ function App() {
           </div>
         </div>
       </nav>
+
 
       {/* Sections */}
       <section id="home" className="section">
@@ -118,7 +125,7 @@ function App() {
       <section id="projects" className="section">
         <h2>Projects</h2>
         <div>
-          <div className="project-grid">
+          <div className="project-grid ">
             <div className="card" data-animate="">
               <img src="/vibra.jpg" alt="Vibra" />
               <div className="card-body">
@@ -303,6 +310,7 @@ function App() {
           </a>
         </div>
       </section>
+      
     </div>
   );
 }
