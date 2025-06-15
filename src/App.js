@@ -4,7 +4,7 @@ import "aos/dist/aos.css";
 import ParticleBackground from "./ParticleBackground";
 import { useEffect, useState } from "react";
 
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   const [activeSection, setActiveSection] = useState("home");
@@ -35,9 +35,8 @@ function App() {
 
   return (
     <div className="App">
+      <ParticleBackground />
 
-     <ParticleBackground />
-         
       {/* Navbar */}
       <nav className="navbar fixed-top shadow-sm">
         <div className="container">
@@ -64,7 +63,6 @@ function App() {
         </div>
       </nav>
 
-
       {/* Sections */}
       <section id="home" className="section">
         <div className="content-container">
@@ -84,6 +82,15 @@ function App() {
               <img src="/gitlab.svg" alt="icon" />
             </div>
             <h1 className="fade-in">Hi, Anjali here</h1>
+            <a
+              href="/anjali_cv.pdf"
+              download
+              target="_blank"
+              rel="noopener noreferrer"
+              className=" download-btn fade-in"
+            >
+              Download Resume
+            </a>
           </div>
 
           {/* Profile on the Right */}
@@ -109,11 +116,10 @@ function App() {
               front-end intern.
             </p>
             <p>
-              “Skilled in <strong>Kotlin</strong>,{" "}
-              <strong>JavaScript</strong>, <strong>React</strong>,{" "}
-              <strong>Android Development</strong>, and <strong>Figma</strong> —
-              I’m always exploring new technologies to build meaningful and
-              user-centric digital experiences.” 
+              “Skilled in <strong>Kotlin</strong>, <strong>JavaScript</strong>,{" "}
+              <strong>React</strong>, <strong>Android Development</strong>, and{" "}
+              <strong>Figma</strong> — I’m always exploring new technologies to
+              build meaningful and user-centric digital experiences.”
             </p>
           </div>
           <div className="gif-container">
@@ -253,7 +259,7 @@ function App() {
             data-tooltip="Instagram"
           >
             <img
-              src="/instagram.svg"
+              src="/instagram-white.svg"
               alt="Insta Icon"
               className="contact-icon"
             />
@@ -266,7 +272,11 @@ function App() {
             data-tooltip="GitHub"
             className="contact-link"
           >
-            <img src="/github.svg" alt="GitHub Icon" className="contact-icon" />
+            <img
+              src="/github-white.svg"
+              alt="GitHub Icon"
+              className="contact-icon"
+            />
           </a>
 
           <a
@@ -277,7 +287,7 @@ function App() {
             data-tooltip="LinkedIn"
           >
             <img
-              src="/linkedin.svg"
+              src="/linkedin-white.svg"
               alt="LinkedIn Icon"
               className="contact-icon"
             />
@@ -289,7 +299,7 @@ function App() {
             data-tooltip="Gmail"
           >
             <img
-              src="/message-square.svg"
+              src="/gmail-white.svg"
               alt="Gmail Icon"
               className="contact-icon"
             />
@@ -300,17 +310,16 @@ function App() {
             target="_blank"
             rel="noopener noreferrer"
             className="contact-link"
-            data-tooltip="Twitter"
+            data-tooltip="X"
           >
             <img
-              src="/twitter.svg"
+              src="/x-white.svg"
               alt="Twitter Icon"
               className="contact-icon"
             />
           </a>
         </div>
       </section>
-      
     </div>
   );
 }
