@@ -215,18 +215,22 @@ background-image: radial-gradient(circle, #5f6368, #4a4c50, #363739, #222224, #0
   display: inline-block; /* <-- needed for transform to work */
   background-image: radial-gradient(circle, #5f6368, #4a4c50, #363739, #222224, #0e0e0e);
   color: white;
-  padding: 0.6rem 1.2rem;
-  border: none;
+  padding: 0.6rem 0.5rem;
+  border: rgb(221, 221, 223) 1px solid;
   border-radius: 0.6rem;
   text-decoration: none;
   text-align: center;
-  font-weight: 300;
-  transition: transform 0.3s ease-in-out, background 0.3s ease;
+  font-weight: 350;
+  
 }
 
 
 .download-btn:hover {
   transform: scale(1.1); 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  color: #000000;
+  font-weight: 450;
   background-image: radial-gradient(circle, #8f959d, #777e86, #60676f, #4a515a, #353c45);
 }
 

@@ -82,15 +82,8 @@ function App() {
               <img src="/gitlab.svg" alt="icon" />
             </div>
             <h1 className="fade-in">Hi, Anjali here</h1>
-            <a
-              href="/anjali_cv.pdf"
-              download
-              target="_blank"
-              rel="noopener noreferrer"
-              className=" download-btn fade-in"
-            >
-              Download Resume
-            </a>
+           <a href="/Anjali_cv.pdf" download className="download-btn fade-in">
+            Download Resume </a>
           </div>
 
           {/* Profile on the Right */}
