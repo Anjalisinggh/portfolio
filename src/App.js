@@ -116,8 +116,9 @@ function App() {
             </p>
           </div>
           <div className="gif-container">
-            <img src="/hello.gif" alt="Coding Animation" className="gif" />
-          </div>
+            <video src="/coding.mp4"   controls autoPlay loop muted
+  playsInlinealt="Coding Animation" className="gif" />
+          </div> 
         </div>
       </section>
 

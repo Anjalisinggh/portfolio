@@ -215,13 +215,14 @@ background-image: radial-gradient(circle, #5f6368, #4a4c50, #363739, #222224, #0
   display: inline-block; /* <-- needed for transform to work */
   background-image: radial-gradient(circle, #5f6368, #4a4c50, #363739, #222224, #0e0e0e);
   color: white;
-  padding: 0.6rem 0.5rem;
-  border: rgb(221, 221, 223) 1px solid;
+  
+ padding: 0.2rem 1rem;
   border-radius: 0.6rem;
   text-decoration: none;
   text-align: center;
-  font-weight: 350;
+  font-weight: 250;
   
+
 }
 
 
