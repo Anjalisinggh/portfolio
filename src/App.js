@@ -162,6 +162,44 @@ function App() {
                 </a>
               </div>
             </div>
+             <div className="card" data-animate="">
+              <img src="/ecosnap.jpg" alt="ecosnap" />
+              <div className="card-body">
+                <h5 className="card-title">Eco Snap</h5>
+                <p className="card-text">
+                  EcoSnap is a web app that uses Hugging Face AI to detect plant leaf diseases instantly from uploaded photos. Built with React and Next.js, it provides a clean, user-friendly interface for quick and accurate plant health diagnosis.
+                </p>
+                <a
+                  href="https://ecoosnap.vercel.app/"
+                  className="btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Project
+                </a>
+              </div>
+            </div>
+             <div className="card" data-animate="">
+              <img src="/safetrip.png" alt="Traffic Prom" />
+              <div className="card-body">
+                <h5 className="card-title">Safe Trip</h5>
+                <p className="card-text">
+                  SafeTrip is a React-based web app that helps users plan safer
+                  travel routes by visualizing real-time crime data on an
+                  interactive map. It alerts users about high-risk areas along
+                  their selected path using heatmaps and location tracking.
+                </p>
+                <a
+                  href="https://safetrip-neon.vercel.app/"
+                  className="btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Project
+                </a>
+              </div>
+            </div>
+            
             <div className="card" data-animate="">
               <img src="/skyteller.png" alt="Sky Teller" />
               <div className="card-body">
@@ -217,26 +255,7 @@ function App() {
               </div>
             </div>
 
-            <div className="card" data-animate="">
-              <img src="/safetrip.png" alt="Traffic Prom" />
-              <div className="card-body">
-                <h5 className="card-title">Safe Trip</h5>
-                <p className="card-text">
-                  SafeTrip is a React-based web app that helps users plan safer
-                  travel routes by visualizing real-time crime data on an
-                  interactive map. It alerts users about high-risk areas along
-                  their selected path using heatmaps and location tracking.
-                </p>
-                <a
-                  href="https://safetrip-neon.vercel.app/"
-                  className="btn"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  View Project
-                </a>
-              </div>
-            </div>
+           
           </div>
         </div>
       </section>
