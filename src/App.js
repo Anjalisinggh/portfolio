@@ -117,13 +117,15 @@ function App() {
           </div>
           <div className="gif-container">
             <video src="/coding.mp4"   controls autoPlay loop muted
-  playsInlinealt="Coding Animation" className="gif" />
+  playsInline alt="Coding Animation" className="gif" />
           </div> 
         </div>
       </section>
 
       <section id="projects" className="section">
         <h2>Projects</h2>
+        
+       
         <div>
           <div className="project-grid ">
             <div className="card" data-animate="">
@@ -237,23 +239,7 @@ function App() {
                 </a>
               </div>
             </div>
-            <div className="card" data-animate="">
-              <img src="/todo.jpg" alt="ToDo" />
-              <div className="card-body">
-                <h5 className="card-title">ToDo</h5>
-                <p className="card-text">
-                  A minimal task manager with local storage support.
-                </p>
-                <a
-                  href="https://todo-cyan-pi.vercel.app/"
-                  className="btn"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  View Project
-                </a>
-              </div>
-            </div>
+           
 
            
           </div>

@@ -351,7 +351,7 @@ background-image: radial-gradient(circle, #5f6368, #4a4c50, #363739, #222224, #0
 /* Project Section */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* exactly 3 cards per row */
+  grid-template-columns: repeat(4, 1fr); /* exactly 3 cards per row */
   gap: 2rem;
   margin-top: 2rem;
   padding: 0 1rem;
@@ -435,6 +435,7 @@ background-image: radial-gradient(circle, #5f6368, #4a4c50, #363739, #222224, #0
 @media (max-width: 600px) {
   .project-grid {
     grid-template-columns: 1fr;
+    margin: 10px ;
     gap: 1.2rem;
     padding: 0 0.5rem;
   }
