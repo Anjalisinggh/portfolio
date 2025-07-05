@@ -124,7 +124,7 @@ function App() {
 
       <section id="projects" className="section">
         <h2>Projects</h2>
-        
+       
        
         <div>
           <div className="project-grid ">

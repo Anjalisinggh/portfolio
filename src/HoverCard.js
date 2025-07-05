@@ -10,11 +10,11 @@ const HoverCard = ({ title, image, description, tag }) => {
       onMouseLeave={() => setHovered(false)}
     >
       {/* Image */}
-      <div className="absolute inset-0">
+      <div className=" -0">
         <img
           src={image}
           alt={title}
-          className="w-full h-full object-cover transition-transform duration-500 transform hover:scale-110"
+          className="w-10 h-10 object-cover transition-transform duration-500 transform hover:scale-110"
         />
       </div>
 

@@ -1,75 +1,50 @@
-// src/components/ProjectsSection.js
-import React from 'react';
-import HoverCard from './HoverCard';
+// src/components/HoverCard.js
+import React from "react";
 
-const ProjectsSection = () => {
+const HoverCard = ({
+  image = "/placeholder.svg?height=400&width=320",
+  title = "Beautiful Landscape",
+  subtitle = "Photography",
+  shortText = "Hover to explore",
+  longText = "Discover the breathtaking beauty of nature's most stunning landscapes and immerse yourself in tranquil moments.",
+  buttonLabel = "View More",
+  onButtonClick = () => {},
+}) => {
   return (
-    <section id="projects" className="py-20 bg-gray-100">
-      <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">Projects xyz</h2>
+    <div className="relative w-80 h-96 overflow-hidden rounded-xl shadow-lg cursor-pointer group bg-gray-100">
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+        style={{ backgroundImage: `url(${image})` }}
+      />
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 px-4 max-w-7xl mx-auto">
-        <HoverCard
-          image="/vibra.jpg"
-          title="Vibra"
-          subtitle="Full-stack / Music"
-          shortText="Hover to explore"
-          longText="A mood-based music app that allows users to share anonymous feelings."
-          buttonLabel="View Project"
-          onButtonClick={() => window.open("https://vibra-mu.vercel.app/", "_blank")}
-        />
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
-        <HoverCard
-          image="/kaizen.jpg"
-          title="Kaizen Arts"
-          subtitle="Android / AR"
-          shortText="Hover to explore"
-          longText="AR-based app recommending earrings based on user's face shape."
-          buttonLabel="Download APK"
-          onButtonClick={() => window.open("/kaizenArts.apk", "_blank")}
-        />
-
-        <HoverCard
-          image="/ecosnap.jpg"
-          title="Eco Snap"
-          subtitle="React / AI"
-          shortText="Hover to explore"
-          longText="Plant leaf disease detection using Hugging Face's AI model."
-          buttonLabel="View Project"
-          onButtonClick={() => window.open("https://ecoosnap.vercel.app/", "_blank")}
-        />
-
-        <HoverCard
-          image="/skyteller.png"
-          title="Sky Teller"
-          subtitle="React / Weather"
-          shortText="Hover to explore"
-          longText="Real-time weather updates with animated, aesthetic visuals."
-          buttonLabel="View Project"
-          onButtonClick={() => window.open("https://sky-teller.vercel.app/", "_blank")}
-        />
-
-        <HoverCard
-          image="/museek.jpg"
-          title="Museek"
-          subtitle="React / Music"
-          shortText="Hover to explore"
-          longText="Spotify-inspired emotion-based music player with themes."
-          buttonLabel="View Project"
-          onButtonClick={() => window.open("https://museek-ten.vercel.app/", "_blank")}
-        />
-
-        <HoverCard
-          image="/safetrip.png"
-          title="Safe Trip"
-          subtitle="React / Maps"
-          shortText="Hover to explore"
-          longText="Safely navigate with route suggestions using real-time crime data."
-          buttonLabel="View Project"
-          onButtonClick={() => window.open("https://safetrip-neon.vercel.app/", "_blank")}
-        />
+      {/* Content that slides up on hover */}
+      <div className="absolute inset-x-0 bottom-0 p-6 text-white transform translate-y-6 transition-transform duration-500 ease-out group-hover:translate-y-0">
+        <h3 className="text-xl font-bold mb-2">{title}</h3>
+        <p className="text-sm text-gray-200 mb-4 opacity-0 transition-opacity duration-500 delay-100 group-hover:opacity-100">
+          {longText}
+        </p>
+        <div className="flex items-center justify-between opacity-0 transition-opacity duration-500 delay-200 group-hover:opacity-100">
+          <span className="text-xs text-gray-300">{subtitle}</span>
+          <button
+            onClick={onButtonClick}
+            className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-xs font-medium hover:bg-white/30 transition-colors"
+          >
+            {buttonLabel}
+          </button>
+        </div>
       </div>
-    </section>
+
+      {/* Initially visible content */}
+      <div className="absolute bottom-6 left-6 text-white transition-opacity duration-300 group-hover:opacity-0">
+        <h3 className="text-xl font-bold">{title}</h3>
+        <p className="text-sm text-gray-300">{shortText}</p>
+      </div>
+    </div>
   );
 };
 
-export default ProjectsSection;
+export default HoverCard;
