@@ -131,12 +131,12 @@ function App() {
             <div className="card" data-animate="">
               <img src="/vibra.jpg" alt="Vibra" />
               <div className="card-body">
-                <h5 className="card-title">Vibra (Ongoing)</h5>
+                <h5 className="card-title">Vibra</h5>
                 <p className="card-text">
-                  A full-stack music app with anonymous messages{" "}
+                 Vibra is a music platform that allows users to stream songs and share anonymous messages linked to each track  creating a personal and expressive listening experience without revealing their identity.
                 </p>
                 <a
-                  href="https://vibra-mu.vercel.app/"
+                  href="https://vibraa.vercel.app/"
                   className="btn"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -173,6 +173,23 @@ function App() {
                 </p>
                 <a
                   href="https://ecoosnap.vercel.app/"
+                  className="btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Project
+                </a>
+              </div>
+            </div>
+             <div className="card" data-animate="">
+              <img src="/crypto.jpg" alt="Vibra" />
+              <div className="card-body">
+                <h5 className="card-title">Crypto Learning Hub</h5>
+                <p className="card-text">
+                Master Bitcoin, NFTs, DeFi, and blockchain technology with our interactive courses, quizzes, and animated explainers designed for complete beginners.
+                </p>
+                <a
+                  href="https://cryptolearninghub.vercel.app/"
                   className="btn"
                   target="_blank"
                   rel="noopener noreferrer"
