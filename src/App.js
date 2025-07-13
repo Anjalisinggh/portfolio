@@ -182,7 +182,7 @@ function App() {
               </div>
             </div>
              <div className="card" data-animate="">
-              <img src="/crypto.jpg" alt="Vibra" />
+              <img src="/crypto.jpg" alt="Crypto" />
               <div className="card-body">
                 <h5 className="card-title">Crypto Learning Hub</h5>
                 <p className="card-text">
