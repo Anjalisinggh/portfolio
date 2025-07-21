@@ -240,14 +240,14 @@ function App() {
               </div>
             </div>
             <div className="card" data-animate="">
-              <img src="/museek.jpg" alt="Museek" />
+              <img src="/maybliss.jpg" alt="Maybliss" />
               <div className="card-body">
-                <h5 className="card-title">Museek</h5>
+                <h5 className="card-title">May Bliss</h5>
                 <p className="card-text">
-                  A modern UI music app inspired by Spotify with custom themes.
+                 MayBliss is a self-care app I built, inspired by my own journey toward finding balance. It’s designed to gently support your physical, mental, and emotional well-being through simple daily practices no pressure, just progress.
                 </p>
                 <a
-                  href="https://museek-ten.vercel.app/"
+                  href="https://maybliss.vercel.app/"
                   className="btn"
                   target="_blank"
                   rel="noopener noreferrer"
