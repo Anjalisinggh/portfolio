@@ -82,8 +82,9 @@ function App() {
               <img src="/gitlab.svg" alt="icon" />
             </div>
             <h1 className="fade-in">Hi, Anjali here</h1>
-           <a href="/Anjali_cv.pdf" download className="download-btn fade-in">
-            Download Resume </a>
+            <a href="/Anjali_cv.pdf" download className="download-btn fade-in">
+              Download Resume{" "}
+            </a>
           </div>
 
           {/* Profile on the Right */}
@@ -116,16 +117,23 @@ function App() {
             </p>
           </div>
           <div className="gif-container">
-            <video src="/coding.mp4"   controls autoPlay loop muted
-  playsInline alt="Coding Animation" className="gif" />
-          </div> 
+            <video
+              src="/coding.mp4"
+              controls
+              autoPlay
+              loop
+              muted
+              playsInline
+              alt="Coding Animation"
+              className="gif"
+            />
+          </div>
         </div>
       </section>
 
       <section id="projects" className="section">
         <h2>Projects</h2>
-       
-       
+
         <div>
           <div className="project-grid ">
             <div className="card" data-animate="">
@@ -133,7 +141,10 @@ function App() {
               <div className="card-body">
                 <h5 className="card-title">Vibra</h5>
                 <p className="card-text">
-                 Vibra is a music platform that allows users to stream songs and share anonymous messages linked to each track  creating a personal and expressive listening experience without revealing their identity.
+                  Vibra is a music platform that allows users to stream songs
+                  and share anonymous messages linked to each track creating a
+                  personal and expressive listening experience without revealing
+                  their identity.
                 </p>
                 <a
                   href="https://vibraa.vercel.app/"
@@ -164,12 +175,15 @@ function App() {
                 </a>
               </div>
             </div>
-             <div className="card" data-animate="">
+            <div className="card" data-animate="">
               <img src="/ecosnap.jpg" alt="ecosnap" />
               <div className="card-body">
                 <h5 className="card-title">Eco Snap</h5>
                 <p className="card-text">
-                  EcoSnap is a web app that uses Hugging Face AI to detect plant leaf diseases instantly from uploaded photos. Built with React and Next.js, it provides a clean, user-friendly interface for quick and accurate plant health diagnosis.
+                  EcoSnap is a web app that uses Hugging Face AI to detect plant
+                  leaf diseases instantly from uploaded photos. Built with React
+                  and Next.js, it provides a clean, user-friendly interface for
+                  quick and accurate plant health diagnosis.
                 </p>
                 <a
                   href="https://ecoosnap.vercel.app/"
@@ -181,12 +195,14 @@ function App() {
                 </a>
               </div>
             </div>
-             <div className="card" data-animate="">
+            <div className="card" data-animate="">
               <img src="/crypto.jpg" alt="Crypto" />
               <div className="card-body">
                 <h5 className="card-title">Crypto Learning Hub</h5>
                 <p className="card-text">
-                Master Bitcoin, NFTs, DeFi, and blockchain technology with our interactive courses, quizzes, and animated explainers designed for complete beginners.
+                  Master Bitcoin, NFTs, DeFi, and blockchain technology with our
+                  interactive courses, quizzes, and animated explainers designed
+                  for complete beginners.
                 </p>
                 <a
                   href="https://cryptolearninghub.vercel.app/"
@@ -198,7 +214,7 @@ function App() {
                 </a>
               </div>
             </div>
-             <div className="card" data-animate="">
+            <div className="card" data-animate="">
               <img src="/safetrip.png" alt="Traffic Prom" />
               <div className="card-body">
                 <h5 className="card-title">Safe Trip</h5>
@@ -218,8 +234,51 @@ function App() {
                 </a>
               </div>
             </div>
-            
+
+          
             <div className="card" data-animate="">
+              <img src="/maybliss.jpg" alt="Maybliss" />
+              <div className="card-body">
+                <h5 className="card-title">May Bliss</h5>
+                <p className="card-text">
+                  MayBliss is a self-care app I built, inspired by my own
+                  journey toward finding balance. It’s designed to gently
+                  support your physical, mental, and emotional well-being
+                  through simple daily practices no pressure, just progress.
+                </p>
+                <a
+                  href="https://maybliss.vercel.app/"
+                  className="btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Project
+                </a>
+              </div>
+            </div>
+
+            <div className="card" data-animate="">
+              <img src="/soul.png" alt="SoulScript" />
+              <div className="card-body">
+                <h5 className="card-title">Soul Script</h5>
+                <p className="card-text">
+                  Soul Script is a calm corner of the internet where emotions
+                  find words. Each quote is a gentle reminder that you're not
+                  alone  whether you're healing, growing, or just feeling. Let
+                  the words speak to your soul.{" "}
+                </p>
+                <a
+                  href="https://soullscript.vercel.app/"
+                  className="btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Project
+                </a>
+              </div>
+            </div>
+
+              <div className="card" data-animate="">
               <img src="/skyteller.png" alt="Sky Teller" />
               <div className="card-body">
                 <h5 className="card-title">Sky Teller</h5>
@@ -239,26 +298,6 @@ function App() {
                 </a>
               </div>
             </div>
-            <div className="card" data-animate="">
-              <img src="/maybliss.jpg" alt="Maybliss" />
-              <div className="card-body">
-                <h5 className="card-title">May Bliss</h5>
-                <p className="card-text">
-                 MayBliss is a self-care app I built, inspired by my own journey toward finding balance. It’s designed to gently support your physical, mental, and emotional well-being through simple daily practices no pressure, just progress.
-                </p>
-                <a
-                  href="https://maybliss.vercel.app/"
-                  className="btn"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  View Project
-                </a>
-              </div>
-            </div>
-           
-
-           
           </div>
         </div>
       </section>
