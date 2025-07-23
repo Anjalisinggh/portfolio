@@ -1,0 +1,66 @@
+export const projects = [
+  {
+    id: "vibra",
+    title: "Vibra",
+    description:
+      "Vibra is a music platform that allows users to stream songs and share anonymous messages linked to each track creating a personal and expressive listening experience without revealing their identity.",
+    image: "/vibra.jpg",
+    liveLink: "https://vibraa.vercel.app/"
+  },
+  {
+    id: "kaizen-arts",
+    title: "Kaizen Arts",
+    description:
+      "Developed an AI-powered AR app that uses facial detection to recommend earring styles based on individual features and preferences.",
+    image: "/kaizen.jpg",
+    downloadLink: "/kaizenArts.apk"
+  },
+  {
+    id: "eco-snap",
+    title: "Eco Snap",
+    description:
+      "EcoSnap is a web app that uses Hugging Face AI to detect plant leaf diseases instantly from uploaded photos. Built with React and Next.js, it provides a clean, user-friendly interface for quick and accurate plant health diagnosis.",
+    image: "/ecosnap.jpg",
+    liveLink: "https://ecoosnap.vercel.app/"
+  },
+  {
+    id: "crypto-learning-hub",
+    title: "Crypto Learning Hub",
+    description:
+      "Master Bitcoin, NFTs, DeFi, and blockchain technology with our interactive courses, quizzes, and animated explainers designed for complete beginners.",
+    image: "/crypto.jpg",
+    liveLink: "https://cryptolearninghub.vercel.app/"
+  },
+  {
+    id: "safe-trip",
+    title: "Safe Trip",
+    description:
+      "SafeTrip is a React-based web app that helps users plan safer travel routes by visualizing real-time crime data on an interactive map. It alerts users about high-risk areas along their selected path using heatmaps and location tracking.",
+    image: "/safetrip.png",
+    liveLink: "https://safetrip-neon.vercel.app/"
+  },
+  {
+    id: "may-bliss",
+    title: "May Bliss",
+    description:
+      "MayBliss is a self-care app I built, inspired by my own journey toward finding balance. It’s designed to gently support your physical, mental, and emotional well-being through simple daily practices no pressure, just progress.",
+    image: "/maybliss.jpg",
+    liveLink: "https://maybliss.vercel.app/"
+  },
+  {
+    id: "soul-script",
+    title: "Soul Script",
+    description:
+      "Soul Script is a calm corner of the internet where emotions find words. Each quote is a gentle reminder that you're not alone whether you're healing, growing, or just feeling. Let the words speak to your soul.",
+    image: "/soul.png",
+    liveLink: "https://soullscript.vercel.app/"
+  },
+  {
+    id: "sky-teller",
+    title: "Sky Teller",
+    description:
+      "SkyTeller, a weather forecasting web app that presents real-time weather updates alongside creative, fortune-style messages. Focused on delivering a clean, responsive user interface with an engaging and interactive experience.",
+    image: "/skyteller.png",
+    liveLink: "https://sky-teller.vercel.app/"
+  }
+]
