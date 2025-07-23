@@ -191,51 +191,51 @@ export default function HomePage() {
           <p className="mb-10 text-lg text-gray-700 dark:text-gray-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
             Have a project in mind? Let's chat ✨
           </p>
-          <div className="flex flex-wrap justify-center gap-8">
-            <a
-              href="https://www.instagram.com/anjalisinggh_12/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex flex-col items-center gap-2 text-gray-600 transition-colors hover:text-primary dark:text-gray-400 dark:hover:text-primary"
-            >
-              <Instagram className="h-9 w-9 transition-transform group-hover:scale-110" />
-              <span className="text-sm font-medium">Instagram</span>
-            </a>
-            <a
-              href="https://github.com/Anjalisinggh"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex flex-col items-center gap-2 text-gray-600 transition-colors hover:text-primary dark:text-gray-400 dark:hover:text-primary"
-            >
-              <Github className="h-9 w-9 transition-transform group-hover:scale-110" />
-              <span className="text-sm font-medium">GitHub</span>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/anjali-singh-82bb42302/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex flex-col items-center gap-2 text-gray-600 transition-colors hover:text-primary dark:text-gray-400 dark:hover:text-primary"
-            >
-              <Linkedin className="h-9 w-9 transition-transform group-hover:scale-110" />
-              <span className="text-sm font-medium">LinkedIn</span>
-            </a>
-            <a
-              href="mailto:anjalisinggh.12@gmail.com"
-              className="group flex flex-col items-center gap-2 text-gray-600 transition-colors hover:text-primary dark:text-gray-400 dark:hover:text-primary"
-            >
-              <Mail className="h-9 w-9 transition-transform group-hover:scale-110" />
-              <span className="text-sm font-medium">Gmail</span>
-            </a>
-            <a
-              href="https://x.com/anjalisinggh12?t=7C4F4VoZQBtreAbIsOFFYg&s=08"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex flex-col items-center gap-2 text-gray-600 transition-colors hover:text-primary dark:text-gray-400 dark:hover:text-primary"
-            >
-              <X className="h-9 w-9 transition-transform group-hover:scale-110" />
-              <span className="text-sm font-medium">X (Twitter)</span>
-            </a>
-          </div>
+         <div className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8">
+  <a
+    href="https://www.instagram.com/anjalisinggh_12/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="group flex flex-col items-center gap-1 sm:gap-2 text-gray-600 transition-colors hover:text-primary dark:text-gray-400 dark:hover:text-primary"
+  >
+    <Instagram className="h-7 w-7 sm:h-8 sm:w-8 md:h-9 md:w-9 transition-transform group-hover:scale-110" />
+    <span className="text-xs sm:text-sm font-medium">Instagram</span>
+  </a>
+  <a
+    href="https://github.com/Anjalisinggh"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="group flex flex-col items-center gap-1 sm:gap-2 text-gray-600 transition-colors hover:text-primary dark:text-gray-400 dark:hover:text-primary"
+  >
+    <Github className="h-7 w-7 sm:h-8 sm:w-8 md:h-9 md:w-9 transition-transform group-hover:scale-110" />
+    <span className="text-xs sm:text-sm font-medium">GitHub</span>
+  </a>
+  <a
+    href="https://www.linkedin.com/in/anjali-singh-82bb42302/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="group flex flex-col items-center gap-1 sm:gap-2 text-gray-600 transition-colors hover:text-primary dark:text-gray-400 dark:hover:text-primary"
+  >
+    <Linkedin className="h-7 w-7 sm:h-8 sm:w-8 md:h-9 md:w-9 transition-transform group-hover:scale-110" />
+    <span className="text-xs sm:text-sm font-medium">LinkedIn</span>
+  </a>
+  <a
+    href="mailto:anjalisinggh.12@gmail.com"
+    className="group flex flex-col items-center gap-1 sm:gap-2 text-gray-600 transition-colors hover:text-primary dark:text-gray-400 dark:hover:text-primary"
+  >
+    <Mail className="h-7 w-7 sm:h-8 sm:w-8 md:h-9 md:w-9 transition-transform group-hover:scale-110" />
+    <span className="text-xs sm:text-sm font-medium">Gmail</span>
+  </a>
+  <a
+    href="https://x.com/anjalisinggh12?t=7C4F4VoZQBtreAbIsOFFYg&s=08"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="group flex flex-col items-center gap-1 sm:gap-2 text-gray-600 transition-colors hover:text-primary dark:text-gray-400 dark:hover:text-primary"
+  >
+    <X className="h-7 w-7 sm:h-8 sm:w-8 md:h-9 md:w-9 transition-transform group-hover:scale-110" />
+    <span className="text-xs sm:text-sm font-medium">X (Twitter)</span>
+  </a>
+</div>
         </div>
       </section>
     </div>
