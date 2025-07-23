@@ -56,26 +56,28 @@ export default function HomePage() {
 <nav className="fixed top-4 left-1/2 z-50 w-[calc(100%-2rem)] max-w-fit -translate-x-1/2">
   <div className="flex items-center justify-between">
     <div className="flex items-center rounded-full bg-white/80 px-3 py-2 shadow-lg backdrop-blur-sm dark:bg-gray-800/80">
-      <div className="flex gap-4 overflow-x-auto whitespace-nowrap scrollbar-hide px-2 sm:px-4">
-        {["home", "about", "projects", "contact"].map((section) => (
-          <a
-            key={section}
-            href={`#${section}`}
-            className={`relative px-2 py-1 text-sm font-medium transition-colors hover:text-primary ${
-              activeSection === section
-                ? "text-primary after:absolute after:-bottom-0.5 after:left-0 after:h-0.5 after:w-full after:rounded-full after:bg-primary"
-                : "text-muted-foreground"
-            }`}
-          >
-            {section === "projects"
-              ? "Projects"
-              : section.charAt(0).toUpperCase() + section.slice(1)}
-          </a>
-        ))}
-      </div>
+     <div className="flex gap-4 overflow-x-auto overflow-y-hidden whitespace-nowrap scrollbar-hide px-2 sm:px-4">
+  {["home", "about", "projects", "contact"].map((section) => (
+    <a
+      key={section}
+      href={`#${section}`}
+      className={`relative px-2 py-1 text-sm font-medium transition-colors hover:text-primary ${
+        activeSection === section
+          ? "text-blue-600 after:absolute after:-bottom-0.5 after:left-0 after:h-0.5 after:w-full after:rounded-full after:bg-blue-600"
+          : "text-muted-foreground"
+      }`}
+    >
+      {section === "projects"
+        ? "Projects"
+        : section.charAt(0).toUpperCase() + section.slice(1)}
+    </a>
+  ))}
+</div>
+
     </div>
   </div>
 </nav>
+
 
 <a
   href="/Anjali_cv.pdf"
@@ -182,63 +184,65 @@ export default function HomePage() {
 
       {/* Contact Section */}
       <section
-        id="contact"
-        className="relative z-10 min-h-screen bg-white py-12 dark:bg-gray-800 md:py-24 lg:py-32"
+  id="contact"
+  className="relative z-10 min-h-screen flex items-center justify-center bg-white dark:bg-gray-800 px-4 md:px-6"
+>
+  <div className="text-center">
+    <h2 className="font-heading mb-6 text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
+      Get in Touch
+    </h2>
+    <p className="mb-10 text-lg text-gray-700 dark:text-gray-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+      Have a project in mind? Let's chat ✨
+    </p>
+    <div className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8">
+      {/* Social Links */}
+      <a
+        href="https://www.instagram.com/anjalisinggh_12/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group flex flex-col items-center gap-1 sm:gap-2 text-gray-600 transition-colors hover:text-primary dark:text-gray-400 dark:hover:text-primary"
       >
-        <div className="container mx-auto px-4 text-center md:px-6">
-          <h2 className="font-heading mb-6 text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
-            Get in Touch
-          </h2>
-          <p className="mb-10 text-lg text-gray-700 dark:text-gray-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Have a project in mind? Let's chat ✨
-          </p>
-         <div className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8">
-  <a
-    href="https://www.instagram.com/anjalisinggh_12/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="group flex flex-col items-center gap-1 sm:gap-2 text-gray-600 transition-colors hover:text-primary dark:text-gray-400 dark:hover:text-primary"
-  >
-    <Instagram className="h-7 w-7 sm:h-8 sm:w-8 md:h-9 md:w-9 transition-transform group-hover:scale-110" />
-    <span className="text-xs sm:text-sm font-medium">Instagram</span>
-  </a>
-  <a
-    href="https://github.com/Anjalisinggh"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="group flex flex-col items-center gap-1 sm:gap-2 text-gray-600 transition-colors hover:text-primary dark:text-gray-400 dark:hover:text-primary"
-  >
-    <Github className="h-7 w-7 sm:h-8 sm:w-8 md:h-9 md:w-9 transition-transform group-hover:scale-110" />
-    <span className="text-xs sm:text-sm font-medium">GitHub</span>
-  </a>
-  <a
-    href="https://www.linkedin.com/in/anjali-singh-82bb42302/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="group flex flex-col items-center gap-1 sm:gap-2 text-gray-600 transition-colors hover:text-primary dark:text-gray-400 dark:hover:text-primary"
-  >
-    <Linkedin className="h-7 w-7 sm:h-8 sm:w-8 md:h-9 md:w-9 transition-transform group-hover:scale-110" />
-    <span className="text-xs sm:text-sm font-medium">LinkedIn</span>
-  </a>
-  <a
-    href="mailto:anjalisinggh.12@gmail.com"
-    className="group flex flex-col items-center gap-1 sm:gap-2 text-gray-600 transition-colors hover:text-primary dark:text-gray-400 dark:hover:text-primary"
-  >
-    <Mail className="h-7 w-7 sm:h-8 sm:w-8 md:h-9 md:w-9 transition-transform group-hover:scale-110" />
-    <span className="text-xs sm:text-sm font-medium">Gmail</span>
-  </a>
-  <a
-    href="https://x.com/anjalisinggh12?t=7C4F4VoZQBtreAbIsOFFYg&s=08"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="group flex flex-col items-center gap-1 sm:gap-2 text-gray-600 transition-colors hover:text-primary dark:text-gray-400 dark:hover:text-primary"
-  >
-    <X className="h-7 w-7 sm:h-8 sm:w-8 md:h-9 md:w-9 transition-transform group-hover:scale-110" />
-    <span className="text-xs sm:text-sm font-medium">X (Twitter)</span>
-  </a>
-</div>
-        </div>
-      </section>
+        <Instagram className="h-7 w-7 sm:h-8 sm:w-8 md:h-9 md:w-9 transition-transform group-hover:scale-110" />
+        <span className="text-xs sm:text-sm font-medium">Instagram</span>
+      </a>
+      <a
+        href="https://github.com/Anjalisinggh"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group flex flex-col items-center gap-1 sm:gap-2 text-gray-600 transition-colors hover:text-primary dark:text-gray-400 dark:hover:text-primary"
+      >
+        <Github className="h-7 w-7 sm:h-8 sm:w-8 md:h-9 md:w-9 transition-transform group-hover:scale-110" />
+        <span className="text-xs sm:text-sm font-medium">GitHub</span>
+      </a>
+      <a
+        href="https://www.linkedin.com/in/anjali-singh-82bb42302/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group flex flex-col items-center gap-1 sm:gap-2 text-gray-600 transition-colors hover:text-primary dark:text-gray-400 dark:hover:text-primary"
+      >
+        <Linkedin className="h-7 w-7 sm:h-8 sm:w-8 md:h-9 md:w-9 transition-transform group-hover:scale-110" />
+        <span className="text-xs sm:text-sm font-medium">LinkedIn</span>
+      </a>
+      <a
+        href="mailto:anjalisinggh.12@gmail.com"
+        className="group flex flex-col items-center gap-1 sm:gap-2 text-gray-600 transition-colors hover:text-primary dark:text-gray-400 dark:hover:text-primary"
+      >
+        <Mail className="h-7 w-7 sm:h-8 sm:w-8 md:h-9 md:w-9 transition-transform group-hover:scale-110" />
+        <span className="text-xs sm:text-sm font-medium">Gmail</span>
+      </a>
+      <a
+        href="https://x.com/anjalisinggh12?t=7C4F4VoZQBtreAbIsOFFYg&s=08"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group flex flex-col items-center gap-1 sm:gap-2 text-gray-600 transition-colors hover:text-primary dark:text-gray-400 dark:hover:text-primary"
+      >
+        <X className="h-7 w-7 sm:h-8 sm:w-8 md:h-9 md:w-9 transition-transform group-hover:scale-110" />
+        <span className="text-xs sm:text-sm font-medium">X</span>
+      </a>
+    </div>
+  </div>
+</section>
+
     </div>
   )
 }
