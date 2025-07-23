@@ -55,9 +55,9 @@ export default function HomePage() {
 {/* Navigation Bar */}
 <nav className="fixed top-4 left-1/2 z-50 w-[calc(100%-2rem)] max-w-fit -translate-x-1/2">
   <div className="flex items-center justify-between">
-    <div className="flex items-center justify-between rounded-full bg-white/80 px-4 py-2 shadow-lg backdrop-blur-sm dark:bg-gray-800/80">
-      <div className="flex gap-4 pr-2 md:pr-0 overflow-x-auto scrollbar-hide whitespace-nowrap">
-        {["home", "about", "projects", "contact"].map(section => (
+    <div className="flex items-center rounded-full bg-white/80 px-3 py-2 shadow-lg backdrop-blur-sm dark:bg-gray-800/80">
+      <div className="flex gap-4 overflow-x-auto whitespace-nowrap scrollbar-hide px-2 sm:px-4">
+        {["home", "about", "projects", "contact"].map((section) => (
           <a
             key={section}
             href={`#${section}`}
@@ -77,15 +77,16 @@ export default function HomePage() {
   </div>
 </nav>
 
-{/* Resume Button */}
 <a
   href="/Anjali_cv.pdf"
   target="_blank"
   rel="noopener noreferrer"
-  className="fixed z-40 top-4 right-4 sm:top-5 sm:right-5 md:top-6 md:right-6 inline-flex items-center justify-center rounded-full bg-black px-4 py-2 text-sm font-medium text-white shadow-lg transition-colors hover:bg-gray-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 dark:bg-gray-950 dark:hover:bg-gray-800"
+  className="fixed bottom-4 right-4 z-40 inline-flex items-center rounded-full bg-black px-4 py-2 text-base font-medium text-white shadow-lg transition-colors hover:bg-gray-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 dark:bg-gray-950 dark:hover:bg-gray-800"
 >
-  Resume <ArrowRight className="ml-1.5 h-4 w-4" />
+  Resume <ArrowRight className="ml-2 h-4 w-4" />
 </a>
+
+
 
 
 
