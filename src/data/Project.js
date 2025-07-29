@@ -62,5 +62,13 @@ export const projects = [
       "SkyTeller, a weather forecasting web app that presents real-time weather updates alongside creative, fortune-style messages. Focused on delivering a clean, responsive user interface with an engaging and interactive experience.",
     image: "/skyteller.png",
     liveLink: "https://sky-teller.vercel.app/"
+  },
+   {
+    id: "petal-haven",
+    title: "Petal Haven",
+    description:
+    "Petal Haven is a beautifully designed wellness tracking platform that helps you nurture your physical, mental, and emotional health in one place. With a focus on simplicity and user experience, it offers personalized insights and gentle reminders to help you bloom.",
+    image: "/petal.png",
+    liveLink: "https://petal-haven.vercel.app/"
   }
 ]
