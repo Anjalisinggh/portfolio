@@ -32,6 +32,14 @@ export const projects = [
     liveLink: "https://cryptolearninghub.vercel.app/"
   },
   {
+    id: "snugglespace",
+    title: "Snuggle Space",
+    description:
+"    SnuggleSpace is a cozy corner of the internet where you can share your thoughts and feelings anonymously. It's a safe space to connect with others, find support, and express yourself without judgment.",
+    image: "/snugglespace.png",
+    liveLink: "https://snugglespace.vercel.app/"
+  },
+  {
     id: "safe-trip",
     title: "Safe Trip",
     description:
@@ -39,6 +47,7 @@ export const projects = [
     image: "/safetrip.png",
     liveLink: "https://safetrip-neon.vercel.app/"
   },
+  
   {
     id: "may-bliss",
     title: "May Bliss",
