@@ -79,5 +79,12 @@ export const projects = [
     "Petal Haven is a beautifully designed wellness tracking platform that helps you nurture your physical, mental, and emotional health in one place. With a focus on simplicity and user experience, it offers personalized insights and gentle reminders to help you bloom.",
     image: "/petal.png",
     liveLink: "https://petal-haven.vercel.app/"
-  }
+  },
+    {
+    id: "check-mate",
+    title: "Check Mate",
+    description:"CheckMate is a context-aware task planner designed to help users organize their daily lives more intelligently. Unlike traditional to-do apps, CheckMate considers your time, energy level, and location to suggest the most suitable tasks in the moment.",
+    image: "/checkmate.png",
+    liveLink: "https://checkmate-sigma.vercel.app/"
+  },
 ]
