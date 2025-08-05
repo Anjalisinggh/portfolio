@@ -87,4 +87,11 @@ export const projects = [
     image: "/checkmate.png",
     liveLink: "https://checkmate-sigma.vercel.app/"
   },
+{
+    id: "MemoRush",
+    title: "MemoRush",
+    description:"Flip. Match. Win  before your memory fades. MemoRush is a fast-paced memory matching game that challenges your focus and recall. Flip cards, find pairs, and race against time across levels of increasing difficulty. With a sleek interface and a cosmic backdrop, MemoRush keeps your brain sharp and your reflexes sharper.",
+    image: "/memorush.png",
+    liveLink: "https://memoo-rush.vercel.app/"
+  },
 ]
