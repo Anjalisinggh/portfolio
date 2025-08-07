@@ -94,4 +94,11 @@ export const projects = [
     image: "/memorush.png",
     liveLink: "https://memoo-rush.vercel.app/"
   },
+  {
+    id: "Escape Room",
+    title: "Escape Room",
+    description:"Escape Room challenges players to explore a mysterious room, uncover hidden clues, collect essential items, and solve logic-based puzzles all under the pressure of a ticking clock.Search the room by clicking on objects to reveal hidden clues and items. Collect essential items to help you solve puzzles. Solve logic-based puzzles to unlock the door and escape before time runs out.",
+    image: "/escape.png",
+    liveLink: "https://escapee-roomm.vercel.app/"
+  },
 ]
