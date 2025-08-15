@@ -12,7 +12,8 @@ export const projects = [
     title: "Kaizen Arts",
     description:
       "Developed an AI-powered AR app that uses facial detection to recommend earring styles based on individual features and preferences.",
-    image: "/kaizen.jpg",
+    image: "/kaizen.jpg", // Thumbnail image
+    video: "/kaizenn.mp4", // Video file
     downloadLink: "/kaizenArts.apk"
   },
   {

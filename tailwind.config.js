@@ -6,6 +6,10 @@ module.exports = {
   darkMode: 'class', // or 'media' or remove if unused
   theme: {
     extend: {
+      fontFamily: {
+        'heading': ['Mozilla Headline', 'system-ui', 'sans-serif'],
+        'sans': ['Mozilla Headline', 'system-ui', 'sans-serif'],
+      },
       colors: {
         primary: '#000', // Twitter blue
         'primary-dark': '#000', // Darker shade for dark mode
