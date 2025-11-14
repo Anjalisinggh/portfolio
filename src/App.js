@@ -3,7 +3,7 @@ import { useEffect, useState, useCallback } from "react"
 
 
 import {
-
+ 
   Bot,
   Laptop,
   Code2,
@@ -302,6 +302,22 @@ export default function HomePage() {
             >
               <X className="h-7 w-7 sm:h-8 sm:w-8 md:h-9 md:w-9 transition-transform group-hover:scale-110 group-hover:rotate-12" />
               <span className="text-xs sm:text-sm font-medium">X</span>
+            </a>
+            <a
+              href="https://www.behance.net/anjaliisingh"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex flex-col items-center gap-1 sm:gap-2 text-gray-600 transition-all duration-300 hover:text-[#1769ff] hover:scale-110 dark:text-gray-400 dark:hover:text-[#1769ff]"
+            >
+              <svg 
+                className="h-7 w-7 sm:h-8 sm:w-8 md:h-9 md:w-9 transition-transform group-hover:scale-110 group-hover:rotate-12" 
+                viewBox="0 0 24 24" 
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.1 1.75H14.01c.022 1.423.928 2.15 2.303 2.15 1.139 0 1.934-.657 2.122-1.978h2.191zm-6.979-7.375c-.099.272-.142.567-.142.861 0 1.667.806 2.764 2.093 2.764 1.127 0 1.874-.85 1.917-2.423h-3.868zM6 13H2v-2h4v2zm-2-3h4V8H4v2zm2-3H2V3h4v4z"/>
+              </svg>
+              <span className="text-xs sm:text-sm font-medium">Behance</span>
             </a>
           </div>
         </div>
