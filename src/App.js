@@ -31,6 +31,7 @@ import { projects } from "./data/Project"
 
 export default function HomePage() {
   const [activeSection, setActiveSection] = useState("home")
+  const [projectTab, setProjectTab] = useState("development")
 
   useEffect(() => {
     const handleScroll = () => {
@@ -171,7 +172,7 @@ export default function HomePage() {
 
         <div className="container mx-auto grid items-center gap-10 px-4 md:grid-cols-2 md:px-6 lg:gap-16 relative z-10">
           <div className="space-y-6 animate-fade-in-up">
-            <h2 className="font-heading text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl bg-gradient-to-r from-gray-900 via-green-600 to-blue-600 bg-clip-text text-transparent animate-fade-in-up animation-delay-300">
+            <h2 className="font-mono text-3xl sm:text-4xl md:text-5xl font-semibold text-gray-900 dark:text-gray-50 animate-fade-in-up animation-delay-300">
               About Me
             </h2>
             <div className="space-y-4 animate-fade-in-up animation-delay-500">
@@ -230,11 +231,38 @@ export default function HomePage() {
         </div>
 
         <div className="container mx-auto px-4 md:px-6 relative z-10">
-          <h2 className="font-heading mb-12 text-center text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl bg-gradient-to-r from-gray-900 via-purple-600 to-pink-600 bg-clip-text text-transparent animate-fade-in-up">
-            My Work
-          </h2>
+          <div className="mb-8 flex items-center justify-between animate-fade-in-up">
+            <h2 className="font-mono text-base sm:text-lg font-semibold tracking-[0.3em] text-gray-900 dark:text-gray-50 uppercase">
+              Projects
+            </h2>
+            <div className="flex items-center rounded-full bg-gray-100 px-1 py-1 text-xs shadow-sm dark:bg-gray-800">
+              <button
+                type="button"
+                onClick={() => setProjectTab("development")}
+                className={`flex items-center gap-1 rounded-full px-3 py-1 font-semibold transition-all duration-200 ${
+                  projectTab === "development"
+                    ? "bg-white text-blue-600 shadow-sm dark:bg-gray-900"
+                    : "text-gray-500 hover:text-blue-600"
+                }`}
+              >
+                <span className="text-blue-500">{">_"}</span>
+                <span>DEV</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => setProjectTab("design")}
+                className={`rounded-full px-3 py-1 font-semibold transition-all duration-200 ${
+                  projectTab === "design"
+                    ? "bg-white text-gray-900 shadow-sm dark:bg-gray-900 dark:text-gray-50"
+                    : "text-gray-500 hover:text-gray-800 dark:hover:text-gray-200"
+                }`}
+              >
+                DES
+              </button>
+            </div>
+          </div>
           <div className="animate-fade-in-up animation-delay-300">
-            <ProjectsCarousel />
+            <ProjectsCarousel activeTab={projectTab} />
           </div>
         </div>
       </section>
@@ -252,7 +280,7 @@ export default function HomePage() {
         </div>
 
         <div className="text-center relative z-10 animate-fade-in-up">
-          <h2 className="font-heading mb-6 text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl bg-gradient-to-r from-gray-900 via-orange-600 to-red-600 bg-clip-text text-transparent animate-fade-in-up animation-delay-300">
+          <h2 className="font-mono mb-6 text-3xl sm:text-4xl md:text-5xl font-semibold text-gray-900 dark:text-gray-50 animate-fade-in-up animation-delay-300">
             Get in Touch
           </h2>
           <p className="mb-10 text-lg text-gray-700 dark:text-gray-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed animate-fade-in-up animation-delay-500">
@@ -387,7 +415,7 @@ function ProjectCard({ project }) {
   )
 }
 
-function ProjectsCarousel() {
+function ProjectsCarousel({ activeTab }) {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { loop: true, align: "start" },
     [Autoplay({ delay: 5000, stopOnInteraction: false })]
@@ -423,54 +451,102 @@ function ProjectsCarousel() {
 
   return (
     <div className="relative">
-      <div className="overflow-hidden" ref={emblaRef}>
-        <div className="flex touch-pan-y">
-          {projects.map(project => (
-            <div
-              key={project.id}
-              className="embla__slide min-w-0 flex-[0_0_100%] p-2 sm:flex-[0_0_50%] lg:flex-[0_0_33.333%]"
-            >
-              <ProjectCard project={project} />
+      {/* Development projects carousel */}
+      {activeTab === "development" && (
+        <div className="relative">
+          <div className="overflow-hidden" ref={emblaRef}>
+            <div className="flex touch-pan-y">
+              {projects.map(project => (
+                <div
+                  key={project.id}
+                  className="embla__slide min-w-0 flex-[0_0_100%] p-2 sm:flex-[0_0_50%] lg:flex-[0_0_33.333%]"
+                >
+                  <ProjectCard project={project} />
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-      </div>
+          </div>
 
-      <Button
-        variant="outline"
-        size="icon"
-        onClick={scrollPrev}
-        disabled={prevBtnDisabled}
-        className="absolute left-0 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/80 shadow-md backdrop-blur-sm hover:bg-white hover:scale-110 hover:shadow-lg dark:bg-gray-800/80 dark:hover:bg-gray-800 transition-all duration-300 md:left-4"
-      >
-        <ArrowLeft className="h-5 w-5" />
-        <span className="sr-only">Previous slide</span>
-      </Button>
-      <Button
-        variant="outline"
-        size="icon"
-        onClick={scrollNext}
-        disabled={nextBtnDisabled}
-        className="absolute right-0 top-1/2 z-10 translate-x-1/2 -translate-y-1/2 rounded-full bg-white/80 shadow-md backdrop-blur-sm hover:bg-white hover:scale-110 hover:shadow-lg dark:bg-gray-800/80 dark:hover:bg-gray-800 transition-all duration-300 md:right-4"
-      >
-        <ArrowRight className="h-5 w-5" />
-        <span className="sr-only">Next slide</span>
-      </Button>
-
-      <div className="mt-8 flex justify-center gap-2">
-        {scrollSnaps.map((_, index) => (
           <Button
-            key={index}
             variant="outline"
             size="icon"
-            onClick={() => scrollTo(index)}
-            className={`h-2 w-2 rounded-full p-0 transition-all duration-300 hover:scale-125 hover:shadow-md ${
-              index === selectedIndex ? "bg-primary scale-125 shadow-md" : "bg-muted-foreground/50"
-            }`}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
-      </div>
+            onClick={scrollPrev}
+            disabled={prevBtnDisabled}
+            className="absolute left-0 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/80 shadow-md backdrop-blur-sm hover:bg-white hover:scale-110 hover:shadow-lg dark:bg-gray-800/80 dark:hover:bg-gray-800 transition-all duration-300 md:left-4"
+          >
+            <ArrowLeft className="h-5 w-5" />
+            <span className="sr-only">Previous slide</span>
+          </Button>
+          <Button
+            variant="outline"
+            size="icon"
+            onClick={scrollNext}
+            disabled={nextBtnDisabled}
+            className="absolute right-0 top-1/2 z-10 translate-x-1/2 -translate-y-1/2 rounded-full bg-white/80 shadow-md backdrop-blur-sm hover:bg-white hover:scale-110 hover:shadow-lg dark:bg-gray-800/80 dark:hover:bg-gray-800 transition-all duration-300 md:right-4"
+          >
+            <ArrowRight className="h-5 w-5" />
+            <span className="sr-only">Next slide</span>
+          </Button>
+
+          <div className="mt-8 flex justify-center gap-2">
+            {scrollSnaps.map((_, index) => (
+              <Button
+                key={index}
+                variant="outline"
+                size="icon"
+                onClick={() => scrollTo(index)}
+                className={`h-2 w-2 rounded-full p-0 transition-all duration-300 hover:scale-125 hover:shadow-md ${
+                  index === selectedIndex ? "bg-primary scale-125 shadow-md" : "bg-muted-foreground/50"
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Design case study */}
+      {activeTab === "design" && (
+        <div className="mt-4 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <Card className="group flex h-full flex-col overflow-hidden rounded-lg border border-purple-200 bg-white shadow-md transition-all duration-500 hover:shadow-2xl hover:scale-105 dark:border-purple-700/70 dark:bg-gray-800">
+            <div className="relative h-56 w-full overflow-hidden">
+              <img
+                src="/solare.jpg"
+                alt="SOLARE — Luxury Jewelry Shopping Experience"
+                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-all duration-500"></div>
+              <div className="absolute bottom-4 left-4 text-sm font-medium uppercase tracking-wide text-purple-200">
+                UI/UX 
+              </div>
+            </div>
+            <CardHeader className="p-4 group-hover:bg-gradient-to-r group-hover:from-purple-50 group-hover:to-pink-50 dark:group-hover:from-gray-800 dark:group-hover:to-gray-700 transition-all duration-500">
+              <CardTitle className="font-heading text-xl font-semibold group-hover:text-purple-600 dark:group-hover:text-purple-300 transition-colors duration-300">
+              SOLARE — Luxury Jewelry Shopping Experience
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="flex-grow p-4 pt-0">
+              <CardDescription className="text-gray-600 dark:text-gray-300">
+              SOLARE is a premium jewelry shopping app designed to bring elegance, emotion, and modern technology into one seamless experience. The goal was to create a refined, intuitive, and immersive mobile journey where users can discover handcrafted pieces, try them on virtually, and complete purchases with confidence.              </CardDescription>
+            </CardContent>
+            <CardFooter className="flex justify-between items-center gap-3 p-4 pt-0">
+              <p className="text-xs text-gray-500 dark:text-gray-400">
+                Tools: Figma · Prototyping · User Flows
+              </p>
+              <a
+                href="https://www.behance.net/gallery/238298675/SOLARE-Get-the-Best-Out-of-Rest"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group/btn"
+              >
+                <Button className="bg-purple-600 text-white hover:bg-purple-700 transition-all duration-300 group-hover/btn:scale-105 group-hover/btn:shadow-lg">
+                Explore the Design
+                </Button>
+              </a>
+            </CardFooter>
+          </Card>
+        </div>
+      )}
     </div>
   )
 }
