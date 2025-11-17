@@ -176,7 +176,7 @@ export default function HomePage() {
             </h2>
             <div className="space-y-4 animate-fade-in-up animation-delay-500">
               <p className="max-w-[600px] text-lg text-gray-700 dark:text-gray-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Hi, I'm <strong className="text-green-600 dark:text-green-400">Anjali Singh</strong> — a web developer and UI
+                Hi, I'm <strong className="text-green-600 dark:text-green-400">Anjali Singh</strong>  a web developer and UI
                 designer from Mumbai, recently graduated with a BSc in IT. I love
                 crafting creative, user-focused digital experiences.
               </p>
@@ -192,7 +192,7 @@ export default function HomePage() {
               <p className="max-w-[600px] text-lg text-gray-700 dark:text-gray-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 "Skilled in <strong className="text-red-600 dark:text-red-400">Kotlin</strong>, <strong className="text-indigo-600 dark:text-indigo-400">JavaScript</strong>,{" "}
                 <strong className="text-cyan-600 dark:text-cyan-400">React</strong>, <strong className="text-emerald-600 dark:text-emerald-400">Android Development</strong>, and{" "}
-                <strong className="text-violet-600 dark:text-violet-400">Figma</strong> — I'm always exploring new technologies to
+                <strong className="text-violet-600 dark:text-violet-400">Figma </strong>  I'm always exploring new technologies to
                 build meaningful and user-centric digital experiences."
               </p>
             </div>
