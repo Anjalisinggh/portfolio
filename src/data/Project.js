@@ -24,6 +24,13 @@ export const projects = [
     image: "/ecosnap.jpg",
     liveLink: "https://ecoosnap.vercel.app/"
   },
+     {
+    id: "Reel Route",
+    title: "Reel Route",
+    description:" Save reels from any platform and keep all the locations in one place. When you travel, it reminds you of the spots you saved earlier.You can check details, view the original reel, and get directions instantly. It basically turns your saved reels into a real travel guide.",
+    image: "/reelroute.png",
+    liveLink: "https://reelroute-eta.vercel.app/"
+  },
   {
     id: "crypto-learning-hub",
     title: "Crypto Learning Hub",
@@ -95,6 +102,7 @@ export const projects = [
     image: "/memorush.png",
     liveLink: "https://memoo-rush.vercel.app/"
   },
+
   {
     id: "Escape Room",
     title: "Escape Room",
