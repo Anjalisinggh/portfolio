@@ -232,8 +232,8 @@ export default function HomePage() {
 
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="mb-8 flex items-center justify-between animate-fade-in-up">
-            <h2 className="font-mono text-base sm:text-lg font-semibold tracking-[0.3em] text-gray-900 dark:text-gray-50 uppercase">
-              Projects
+            <h2 className="font-mono text-3xl sm:text-4xl md:text-5xl font-semibold text-gray-900 dark:text-gray-50 animate-fade-in-up animation-delay-300">
+              Work
             </h2>
             <div className="flex items-center rounded-full bg-gray-100 px-1 py-1 text-xs shadow-sm dark:bg-gray-800">
               <button
@@ -546,6 +546,10 @@ function ProjectsCarousel({ activeTab }) {
             </CardFooter>
           </Card>
         </div>
+
+        
+
+        
       )}
     </div>
   )
