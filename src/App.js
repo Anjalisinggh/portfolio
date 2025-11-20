@@ -4,9 +4,7 @@ import { useEffect, useState, useCallback } from "react"
 
 import {
  
-  Bot,
-  Laptop,
-  Code2,
+  
   Github,
   Instagram,
   Linkedin,
@@ -28,6 +26,7 @@ import {
   CardTitle
 } from "./ui/card"
 import { projects } from "./data/Project"
+import AnimatedBackground from "./AnimatedBackground"
 
 export default function HomePage() {
   const [activeSection, setActiveSection] = useState("home")
@@ -47,25 +46,31 @@ export default function HomePage() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  useEffect(() => {
+    document.documentElement.classList.add("dark")
+    document.documentElement.style.backgroundColor = "#0D0D0D"
+    return () => {
+      document.documentElement.classList.remove("dark")
+      document.documentElement.style.backgroundColor = ""
+    }
+  }, [])
+
   return (
-    <div className="relative min-h-screen bg-gray-50 font-sans text-gray-900 dark:bg-gray-900 dark:text-gray-50">
-      {/* Particle Background Placeholder */}
-      <div className="absolute inset-0 z-0 opacity-10 dark:opacity-20">
-        <div className="h-full w-full bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-950" />
-      </div>
+    <div className="relative min-h-screen bg-[#0d0d0d] font-sans text-[#EDEADE]">
+      <AnimatedBackground />
 {/* Navigation Bar */}
 <nav className="fixed top-4 left-1/2 z-50 w-[calc(100%-2rem)] max-w-fit -translate-x-1/2">
   <div className="flex items-center justify-between">
-    <div className="flex items-center rounded-full bg-white/80 px-3 py-2 shadow-lg backdrop-blur-sm dark:bg-gray-800/80">
+    <div className="flex items-center rounded-full border border-[#242424] bg-[#111111]/90 px-3 py-2 shadow-2xl backdrop-blur-md">
      <div className="flex gap-4 overflow-x-auto overflow-y-hidden whitespace-nowrap scrollbar-hide px-2 sm:px-4">
   {["home", "about", "projects", "contact"].map((section) => (
     <a
       key={section}
       href={`#${section}`}
-      className={`relative px-2 py-1 text-sm font-medium transition-colors hover:text-primary ${
+      className={`relative px-2 py-1 text-sm font-medium transition-colors hover:text-[#C6A667] ${
         activeSection === section
-          ? "text-blue-600 after:absolute after:-bottom-0.5 after:left-0 after:h-0.5 after:w-full after:rounded-full after:bg-blue-600"
-          : "text-muted-foreground"
+          ? "text-[#C6A667] after:absolute after:-bottom-0.5 after:left-0 after:h-0.5 after:w-full after:rounded-full after:bg-[#C6A667]"
+          : "text-[#8D8D8D]"
       }`}
     >
       {section === "projects"
@@ -84,7 +89,7 @@ export default function HomePage() {
   href="/Anjali_cv.pdf"
   target="_blank"
   rel="noopener noreferrer"
-  className="fixed bottom-4 right-4 z-40 inline-flex items-center rounded-full bg-black px-4 py-2 text-base font-medium text-white shadow-lg transition-colors hover:bg-gray-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 dark:bg-gray-950 dark:hover:bg-gray-800"
+  className="fixed bottom-4 right-4 z-40 inline-flex items-center rounded-full bg-gradient-to-r from-[#C6A667] to-[#b18a49] px-4 py-2 text-base font-medium text-[#0D0D0D] shadow-lg transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C6A667]/70 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0D0D0D]"
 >
   Resume <ArrowRight className="ml-2 h-4 w-4" />
 </a>
@@ -100,57 +105,35 @@ export default function HomePage() {
       >
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-gradient-to-br from-blue-400/20 to-purple-600/20 blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 h-80 w-80 rounded-full bg-gradient-to-tr from-green-400/20 to-blue-600/20 blur-3xl animate-pulse animation-delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-96 w-96 rounded-full bg-gradient-to-r from-purple-400/10 to-pink-600/10 blur-3xl animate-pulse animation-delay-2000"></div>
+          <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-gradient-to-br from-[#C6A667]/15 to-[#8D8D8D]/25 blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 h-80 w-80 rounded-full bg-gradient-to-tr from-[#b58f4f]/15 to-[#333333]/25 blur-3xl animate-pulse animation-delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 h-96 w-96 -translate-x-1/2 -translate-y-1/2 transform rounded-full bg-gradient-to-r from-[#C6A667]/10 to-[#EDEADE]/5 blur-3xl animate-pulse animation-delay-2000"></div>
         </div>
 
         <div className="container mx-auto grid items-center gap-10 px-4 md:grid-cols-2 md:px-6 lg:gap-16 relative z-10">
           <div className="order-2 space-y-6 text-center md:order-1 md:text-left animate-fade-in-up">
             <div className="flex justify-center gap-6 md:justify-center">
-              <div className="group relative">
-                <Bot className="h-8 w-8 text-blue-500 dark:text-blue-400 transition-all duration-300 group-hover:scale-125 group-hover:text-blue-400 group-hover:drop-shadow-lg cursor-pointer" />
-                <div className="absolute -top-2 -right-2 h-3 w-3 bg-blue-400 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 animate-ping"></div>
-                <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-xs text-blue-500 opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap">
-                 Designing
-                </div>
-              </div>
               
-              <div className="group relative">
-                <Laptop className="h-8 w-8 text-green-500 dark:text-green-400 transition-all duration-300 group-hover:scale-125 group-hover:text-green-400 group-hover:drop-shadow-lg cursor-pointer" />
-                <div className="absolute -top-2 -right-2 h-3 w-3 bg-green-400 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 animate-ping"></div>
-                <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-xs text-green-500 opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap">
-                  Development
-                </div>
-              </div>
-              
-              <div className="group relative">
-                <Code2 className="h-8 w-8 text-purple-500 dark:text-purple-400 transition-all duration-300 group-hover:scale-125 group-hover:text-purple-400 group-hover:drop-shadow-lg cursor-pointer" />
-                <div className="absolute -top-2 -right-2 h-3 w-3 bg-purple-400 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 animate-ping"></div>
-                <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-xs text-purple-500 opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap">
-                  Coding
-                </div>
-              </div>
             </div>
             
-            <h1 className="font-heading text-5xl font-extrabold tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl bg-gradient-to-r from-gray-900 via-blue-600 to-purple-600 bg-clip-text text-transparent animate-fade-in-up animation-delay-300">
+            <h1 className="font-heading text-5xl font-extrabold tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl bg-gradient-to-r from-[#EDEADE] via-[#C6A667] to-[#EDEADE]/60 bg-clip-text text-transparent animate-fade-in-up animation-delay-300">
               Hi, Anjali here
             </h1>
             
-            <p className="text-lg text-gray-600 dark:text-gray-300 animate-fade-in-up animation-delay-500">
+            <p className="text-lg text-[#8D8D8D] animate-fade-in-up animation-delay-500">
             Blending creativity & code into unforgettable journeys ❤️‍🩹
             </p>
           </div>
           
           <div className="order-1 flex justify-center md:order-2 animate-fade-in-up animation-delay-700">
             <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full blur-xl opacity-75 group-hover:opacity-100 transition-all duration-500 animate-pulse"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#C6A667] via-[#b18a49] to-[#8D8D8D] rounded-full blur-xl opacity-75 group-hover:opacity-50 transition-all duration-500 animate-pulse"></div>
               <img
                 src="/anjali.jpg"
                 width={300}
                 height={300}
                 alt="Anjali Singh"
-                className="relative aspect-square rounded-full object-cover shadow-2xl ring-4 ring-white/20 group-hover:ring-8 group-hover:ring-white/40 transition-all duration-500 group-hover:scale-105"
+                className="relative aspect-square rounded-full object-cover shadow-2xl ring-4 ring-white/20 group-hover:ring-2 group-hover:ring-white/40 transition-all duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 rounded-full bg-gradient-to-t from-transparent via-transparent to-black/20 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
             </div>
@@ -161,46 +144,46 @@ export default function HomePage() {
       {/* About Section */}
       <section
         id="about"
-        className="relative z-10 min-h-screen bg-white py-12 dark:bg-gray-800 md:py-24 lg:py-32 overflow-hidden"
+        className="relative z-10 min-h-screen bg-[#1a1a1a] py-12 md:py-24 lg:py-32 overflow-hidden"
       >
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -left-40 h-80 w-80 rounded-full bg-gradient-to-br from-green-400/20 to-blue-600/20 blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -right-40 h-80 w-80 rounded-full bg-gradient-to-tl from-purple-400/20 to-pink-600/20 blur-3xl animate-pulse animation-delay-1000"></div>
-          <div className="absolute top-1/4 right-1/4 h-64 w-64 rounded-full bg-gradient-to-l from-yellow-400/15 to-orange-600/15 blur-3xl animate-pulse animation-delay-2000"></div>
+          <div className="absolute -top-40 -left-40 h-80 w-80 rounded-full bg-gradient-to-br from-[#C6A667]/15 to-transparent blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-40 -right-40 h-80 w-80 rounded-full bg-gradient-to-tl from-[#8D8D8D]/20 to-transparent blur-3xl animate-pulse animation-delay-1000"></div>
+          <div className="absolute top-1/4 right-1/4 h-64 w-64 rounded-full bg-gradient-to-l from-[#C6A667]/10 to-transparent blur-3xl animate-pulse animation-delay-2000"></div>
         </div>
 
         <div className="container mx-auto grid items-center gap-10 px-4 md:grid-cols-2 md:px-6 lg:gap-16 relative z-10">
           <div className="space-y-6 animate-fade-in-up">
-            <h2 className="font-mono text-3xl sm:text-4xl md:text-5xl font-semibold text-gray-900 dark:text-gray-50 animate-fade-in-up animation-delay-300">
+            <h2 className="font-mono text-3xl sm:text-4xl md:text-5xl font-semibold text-[#EDEADE] animate-fade-in-up animation-delay-300">
               About Me
             </h2>
             <div className="space-y-4 animate-fade-in-up animation-delay-500">
-              <p className="max-w-[600px] text-lg text-gray-700 dark:text-gray-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Hi, I'm <strong className="text-green-600 dark:text-green-400">Anjali Singh</strong>  a web developer and UI
+              <p className="max-w-[600px] text-lg text-[#8D8D8D] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                Hi, I'm <strong className="text-[#C6A667]">Anjali Singh</strong>  a web developer and UI
                 designer from Mumbai, recently graduated with a BSc in IT. I love
                 crafting creative, user-focused digital experiences.
               </p>
-              <p className="max-w-[600px] text-lg text-gray-700 dark:text-gray-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              <p className="max-w-[600px] text-lg text-[#8D8D8D] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 From developing an AR-based earring try-on app (
-                <strong className="text-blue-600 dark:text-blue-400">Kaizen Arts</strong>) to building emotion-driven platforms
-                like <strong className="text-purple-600 dark:text-purple-400">Museek</strong> and <strong className="text-pink-600 dark:text-pink-400">Vibra</strong>, I bring
+                <strong className="text-[#C6A667]">Kaizen Arts</strong>) to building emotion-driven platforms
+                like <strong className="text-[#EDEADE]">Museek</strong> and <strong className="text-[#bfa25f]">Vibra</strong>, I bring
                 ideas to life through clean code and expressive design. I've also
                 gained hands-on experience at{" "}
-                <strong className="text-orange-600 dark:text-orange-400">International Business Machines (IBM)</strong> as a
+                <strong className="text-[#C6A667]">International Business Machines (IBM)</strong> as a
                 front-end intern.
               </p>
-              <p className="max-w-[600px] text-lg text-gray-700 dark:text-gray-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                "Skilled in <strong className="text-red-600 dark:text-red-400">Kotlin</strong>, <strong className="text-indigo-600 dark:text-indigo-400">JavaScript</strong>,{" "}
-                <strong className="text-cyan-600 dark:text-cyan-400">React</strong>, <strong className="text-emerald-600 dark:text-emerald-400">Android Development</strong>, and{" "}
-                <strong className="text-violet-600 dark:text-violet-400">Figma </strong>  I'm always exploring new technologies to
+              <p className="max-w-[600px] text-lg text-[#8D8D8D] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                "Skilled in <strong className="text-[#EDEADE]">Kotlin</strong>, <strong className="text-[#C6A667]">JavaScript</strong>,{" "}
+                <strong className="text-[#EDEADE]">React</strong>, <strong className="text-[#C6A667]">Android Development</strong>, and{" "}
+                <strong className="text-[#EDEADE]">Figma </strong>  I'm always exploring new technologies to
                 build meaningful and user-centric digital experiences."
               </p>
             </div>
           </div>
-          <div className="flex justify-center animate-fade-in-up animation-delay-700">
+            <div className="flex justify-center animate-fade-in-up animation-delay-700">
             <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-r from-green-500 via-blue-500 to-purple-500 rounded-xl blur-xl opacity-75 group-hover:opacity-100 transition-all duration-500 animate-pulse"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#C6A667] via-[#9b7b3b] to-[#EDEADE]/40 rounded-xl blur-xl opacity-75 group-hover:opacity-100 transition-all duration-500 animate-pulse"></div>
               <video
                 src="/coding.mp4"
                 controls
@@ -221,31 +204,31 @@ export default function HomePage() {
       {/* Projects Section with Carousel */}
       <section
         id="projects"
-        className="relative z-10 min-h-screen bg-gray-50 py-12 dark:bg-gray-900 md:py-24 lg:py-32 overflow-hidden"
+        className="relative z-10 min-h-screen bg-[#1a1a1a] py-12 md:py-24 lg:py-32 overflow-hidden"
       >
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-gradient-to-bl from-purple-400/20 to-pink-600/20 blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 h-80 w-80 rounded-full bg-gradient-to-tr from-indigo-400/20 to-cyan-600/20 blur-3xl animate-pulse animation-delay-1000"></div>
-          <div className="absolute top-1/3 left-1/3 h-64 w-64 rounded-full bg-gradient-to-r from-blue-400/15 to-green-600/15 blur-3xl animate-pulse animation-delay-2000"></div>
+          <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-gradient-to-bl from-purple-500/20 to-pink-600/20 blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 h-80 w-80 rounded-full bg-gradient-to-tr from-indigo-500/20 to-cyan-600/20 blur-3xl animate-pulse animation-delay-1000"></div>
+          <div className="absolute top-1/3 left-1/3 h-64 w-64 rounded-full bg-gradient-to-r from-blue-500/15 to-green-600/15 blur-3xl animate-pulse animation-delay-2000"></div>
         </div>
 
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="mb-8 flex items-center justify-between animate-fade-in-up">
-            <h2 className="font-mono text-3xl sm:text-4xl md:text-5xl font-semibold text-gray-900 dark:text-gray-50 animate-fade-in-up animation-delay-300">
+            <h2 className="font-mono text-3xl sm:text-4xl md:text-5xl font-semibold text-[#EDEADE] animate-fade-in-up animation-delay-300">
               Work
             </h2>
-            <div className="flex items-center rounded-full bg-gray-100 px-1 py-1 text-xs shadow-sm dark:bg-gray-800">
+            <div className="flex items-center rounded-full bg-[#111111]/80 px-1 py-1 text-xs shadow-sm border border-[#2a2a2a]">
               <button
                 type="button"
                 onClick={() => setProjectTab("development")}
                 className={`flex items-center gap-1 rounded-full px-3 py-1 font-semibold transition-all duration-200 ${
                   projectTab === "development"
-                    ? "bg-white text-blue-600 shadow-sm dark:bg-gray-900"
-                    : "text-gray-500 hover:text-blue-600"
+                    ? "bg-[#242424] text-[#C6A667] shadow-sm"
+                    : "text-[#8D8D8D] hover:text-[#C6A667]"
                 }`}
               >
-                <span className="text-blue-500">{">_"}</span>
+                <span className="text-[#C6A667]">{">_"}</span>
                 <span>DEV</span>
               </button>
               <button
@@ -253,8 +236,8 @@ export default function HomePage() {
                 onClick={() => setProjectTab("design")}
                 className={`rounded-full px-3 py-1 font-semibold transition-all duration-200 ${
                   projectTab === "design"
-                    ? "bg-white text-gray-900 shadow-sm dark:bg-gray-900 dark:text-gray-50"
-                    : "text-gray-500 hover:text-gray-800 dark:hover:text-gray-200"
+                    ? "bg-[#242424] text-[#EDEADE] shadow-sm"
+                    : "text-[#8D8D8D] hover:text-[#EDEADE]"
                 }`}
               >
                 DES
@@ -270,20 +253,20 @@ export default function HomePage() {
       {/* Contact Section */}
       <section
         id="contact"
-        className="relative z-10 min-h-screen flex items-center justify-center bg-white dark:bg-gray-800 px-4 md:px-6 overflow-hidden"
+        className="relative z-10 min-h-screen flex items-center justify-center bg-[#1a1a1a] px-4 md:px-6 overflow-hidden"
       >
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -left-40 h-80 w-80 rounded-full bg-gradient-to-br from-yellow-400/20 to-orange-600/20 blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -right-40 h-80 w-80 rounded-full bg-gradient-to-tl from-red-400/20 to-pink-600/20 blur-3xl animate-pulse animation-delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-96 w-96 rounded-full bg-gradient-to-r from-cyan-400/10 to-blue-600/10 blur-3xl animate-pulse animation-delay-2000"></div>
+          <div className="absolute -bottom-40 -right-40 h-80 w-80 rounded-full bg-gradient-to-tl from-red-500/20 to-pink-600/20 blur-3xl animate-pulse animation-delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 h-96 w-96 -translate-x-1/2 -translate-y-1/2 transform rounded-full bg-gradient-to-r from-cyan-500/10 to-blue-600/10 blur-3xl animate-pulse animation-delay-2000"></div>
         </div>
 
         <div className="text-center relative z-10 animate-fade-in-up">
-          <h2 className="font-mono mb-6 text-3xl sm:text-4xl md:text-5xl font-semibold text-gray-900 dark:text-gray-50 animate-fade-in-up animation-delay-300">
+          <h2 className="font-mono mb-6 text-3xl sm:text-4xl md:text-5xl font-semibold text-[#EDEADE] animate-fade-in-up animation-delay-300">
             Get in Touch
           </h2>
-          <p className="mb-10 text-lg text-gray-700 dark:text-gray-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed animate-fade-in-up animation-delay-500">
+          <p className="mb-10 text-lg text-[#8D8D8D] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed animate-fade-in-up animation-delay-500">
             Have a project in mind? Let's chat ✨
           </p>
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8 animate-fade-in-up animation-delay-700">
@@ -292,7 +275,7 @@ export default function HomePage() {
               href="https://www.instagram.com/anjalisinggh_12/"
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex flex-col items-center gap-1 sm:gap-2 text-gray-600 transition-all duration-300 hover:text-pink-500 hover:scale-110 dark:text-gray-400 dark:hover:text-pink-400"
+              className="group flex flex-col items-center gap-1 sm:gap-2 text-[#8D8D8D] transition-all duration-300 hover:text-[#C6A667] hover:scale-110"
             >
               <Instagram className="h-7 w-7 sm:h-8 sm:w-8 md:h-9 md:w-9 transition-transform group-hover:scale-110 group-hover:rotate-12" />
               <span className="text-xs sm:text-sm font-medium">Instagram</span>
@@ -301,7 +284,7 @@ export default function HomePage() {
               href="https://github.com/Anjalisinggh"
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex flex-col items-center gap-1 sm:gap-2 text-gray-600 transition-all duration-300 hover:text-gray-900 hover:scale-110 dark:text-gray-400 dark:hover:text-white"
+              className="group flex flex-col items-center gap-1 sm:gap-2 text-[#8D8D8D] transition-all duration-300 hover:text-[#EDEADE] hover:scale-110"
             >
               <Github className="h-7 w-7 sm:h-8 sm:w-8 md:h-9 md:w-9 transition-transform group-hover:scale-110 group-hover:-rotate-12" />
               <span className="text-xs sm:text-sm font-medium">GitHub</span>
@@ -310,14 +293,14 @@ export default function HomePage() {
               href="https://www.linkedin.com/in/anjali-singh-82bb42302/"
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex flex-col items-center gap-1 sm:gap-2 text-gray-600 transition-all duration-300 hover:text-blue-600 hover:scale-110 dark:text-gray-400 dark:hover:text-blue-400"
+              className="group flex flex-col items-center gap-1 sm:gap-2 text-[#8D8D8D] transition-all duration-300 hover:text-[#C6A667] hover:scale-110"
             >
               <Linkedin className="h-7 w-7 sm:h-8 sm:w-8 md:h-9 md:w-9 transition-transform group-hover:scale-110 group-hover:rotate-12" />
               <span className="text-xs sm:text-sm font-medium">LinkedIn</span>
             </a>
             <a
               href="mailto:anjalisinggh.12@gmail.com"
-              className="group flex flex-col items-center gap-1 sm:gap-2 text-gray-600 transition-all duration-300 hover:text-red-500 hover:scale-110 dark:text-gray-400 dark:hover:text-red-400"
+              className="group flex flex-col items-center gap-1 sm:gap-2 text-[#8D8D8D] transition-all duration-300 hover:text-[#C6A667] hover:scale-110"
             >
               <Mail className="h-7 w-7 sm:h-8 sm:w-8 md:h-9 md:w-9 transition-transform group-hover:scale-110 group-hover:-rotate-12" />
               <span className="text-xs sm:text-sm font-medium">Gmail</span>
@@ -326,7 +309,7 @@ export default function HomePage() {
               href="https://x.com/anjalisinggh12?t=7C4F4VoZQBtreAbIsOFFYg&s=08"
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex flex-col items-center gap-1 sm:gap-2 text-gray-600 transition-all duration-300 hover:text-blue-400 hover:scale-110 dark:text-gray-400 dark:hover:text-blue-300"
+              className="group flex flex-col items-center gap-1 sm:gap-2 text-[#8D8D8D] transition-all duration-300 hover:text-[#C6A667] hover:scale-110"
             >
               <X className="h-7 w-7 sm:h-8 sm:w-8 md:h-9 md:w-9 transition-transform group-hover:scale-110 group-hover:rotate-12" />
               <span className="text-xs sm:text-sm font-medium">X</span>
@@ -335,7 +318,7 @@ export default function HomePage() {
               href="https://www.behance.net/anjaliisingh"
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex flex-col items-center gap-1 sm:gap-2 text-gray-600 transition-all duration-300 hover:text-[#1769ff] hover:scale-110 dark:text-gray-400 dark:hover:text-[#1769ff]"
+              className="group flex flex-col items-center gap-1 sm:gap-2 text-[#8D8D8D] transition-all duration-300 hover:text-[#C6A667] hover:scale-110"
             >
               <svg 
                 className="h-7 w-7 sm:h-8 sm:w-8 md:h-9 md:w-9 transition-transform group-hover:scale-110 group-hover:rotate-12" 
@@ -356,7 +339,7 @@ export default function HomePage() {
 }
 function ProjectCard({ project }) {
   return (
-    <Card className="group flex h-full flex-col overflow-hidden rounded-lg border border-gray-200 bg-white shadow-md transition-all duration-500 hover:shadow-2xl hover:scale-105 dark:border-gray-700 dark:bg-gray-800">
+    <Card className="group flex h-full flex-col overflow-hidden rounded-lg border border-[#2a2a2a] bg-[#111111] shadow-lg shadow-black/40 transition-all duration-500 hover:shadow-[#C6A667]/30 hover:-translate-y-1">
       <div className="relative h-56 w-full overflow-hidden">
         {project.video ? (
           <video
@@ -377,13 +360,13 @@ function ProjectCard({ project }) {
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
        
       </div>
-      <CardHeader className="p-4 group-hover:bg-gradient-to-r group-hover:from-gray-50 group-hover:to-gray-100 dark:group-hover:from-gray-800 dark:group-hover:to-gray-700 transition-all duration-500">
-        <CardTitle className="font-heading text-xl font-semibold group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
+      <CardHeader className="p-4 group-hover:bg-gradient-to-r group-hover:from-[#1a1a1a] group-hover:to-[#111111] transition-all duration-500">
+        <CardTitle className="font-heading text-xl font-semibold text-[#EDEADE] group-hover:text-[#C6A667] transition-colors duration-300">
           {project.title}
         </CardTitle>
       </CardHeader>
       <CardContent className="flex-grow p-4 pt-0">
-        <CardDescription className="text-gray-600 dark:text-gray-400 group-hover:text-gray-800 dark:group-hover:text-gray-200 transition-colors duration-300">
+        <CardDescription className="text-[#8D8D8D] group-hover:text-[#EDEADE] transition-colors duration-300">
           {project.description}
         </CardDescription>
       </CardContent>
@@ -397,7 +380,7 @@ function ProjectCard({ project }) {
           >
             <Button
               variant="outline"
-              className="border-primary bg-transparent text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 group-hover/btn:scale-105 group-hover/btn:shadow-lg"
+              className="border-[#C6A667] bg-transparent text-[#C6A667] hover:bg-[#C6A667]/10 transition-all duration-300 group-hover/btn:scale-105 group-hover/btn:shadow-lg"
             >
               View Project
             </Button>
@@ -405,7 +388,7 @@ function ProjectCard({ project }) {
         )}
         {project.downloadLink && (
           <a href={project.downloadLink} download className="group/btn">
-            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 group-hover/btn:scale-105 group-hover/btn:shadow-lg">
+            <Button className="bg-gradient-to-r from-[#C6A667] to-[#b18a49] text-[#0D0D0D] hover:from-[#E0C27B] hover:to-[#C6A667] transition-all duration-300 group-hover/btn:scale-105 group-hover/btn:shadow-lg">
               Download
             </Button>
           </a>
@@ -472,7 +455,7 @@ function ProjectsCarousel({ activeTab }) {
             size="icon"
             onClick={scrollPrev}
             disabled={prevBtnDisabled}
-            className="absolute left-0 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/80 shadow-md backdrop-blur-sm hover:bg-white hover:scale-110 hover:shadow-lg dark:bg-gray-800/80 dark:hover:bg-gray-800 transition-all duration-300 md:left-4"
+            className="absolute left-0 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#2a2a2a] bg-[#111111]/80 shadow-lg backdrop-blur-md hover:bg-[#1a1a1a] hover:scale-110 hover:shadow-[#C6A667]/30 transition-all duration-300 md:left-4"
           >
             <ArrowLeft className="h-5 w-5" />
             <span className="sr-only">Previous slide</span>
@@ -482,7 +465,7 @@ function ProjectsCarousel({ activeTab }) {
             size="icon"
             onClick={scrollNext}
             disabled={nextBtnDisabled}
-            className="absolute right-0 top-1/2 z-10 translate-x-1/2 -translate-y-1/2 rounded-full bg-white/80 shadow-md backdrop-blur-sm hover:bg-white hover:scale-110 hover:shadow-lg dark:bg-gray-800/80 dark:hover:bg-gray-800 transition-all duration-300 md:right-4"
+            className="absolute right-0 top-1/2 z-10 translate-x-1/2 -translate-y-1/2 rounded-full border border-[#2a2a2a] bg-[#111111]/80 shadow-lg backdrop-blur-md hover:bg-[#1a1a1a] hover:scale-110 hover:shadow-[#C6A667]/30 transition-all duration-300 md:right-4"
           >
             <ArrowRight className="h-5 w-5" />
             <span className="sr-only">Next slide</span>
@@ -496,7 +479,7 @@ function ProjectsCarousel({ activeTab }) {
                 size="icon"
                 onClick={() => scrollTo(index)}
                 className={`h-2 w-2 rounded-full p-0 transition-all duration-300 hover:scale-125 hover:shadow-md ${
-                  index === selectedIndex ? "bg-primary scale-125 shadow-md" : "bg-muted-foreground/50"
+                  index === selectedIndex ? "bg-[#C6A667] scale-125 shadow-md" : "bg-[#2f2f2f]"
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
@@ -508,7 +491,7 @@ function ProjectsCarousel({ activeTab }) {
       {/* Design case study */}
       {activeTab === "design" && (
         <div className="mt-4 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          <Card className="group flex h-full flex-col overflow-hidden rounded-lg border border-purple-200 bg-white shadow-md transition-all duration-500 hover:shadow-2xl hover:scale-105 dark:border-purple-700/70 dark:bg-gray-800">
+          <Card className="group flex h-full flex-col overflow-hidden rounded-lg border border-[#2a2a2a] bg-[#111111] shadow-lg shadow-black/40 transition-all duration-500 hover:shadow-[#C6A667]/30 hover:-translate-y-1">
             <div className="relative h-56 w-full overflow-hidden">
               <img
                 src="/solare.jpg"
@@ -516,21 +499,21 @@ function ProjectsCarousel({ activeTab }) {
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-all duration-500"></div>
-              <div className="absolute bottom-4 left-4 text-sm font-medium uppercase tracking-wide text-purple-200">
+              <div className="absolute bottom-4 left-4 text-sm font-medium uppercase tracking-wide text-[#C6A667]">
                 UI/UX 
               </div>
             </div>
-            <CardHeader className="p-4 group-hover:bg-gradient-to-r group-hover:from-purple-50 group-hover:to-pink-50 dark:group-hover:from-gray-800 dark:group-hover:to-gray-700 transition-all duration-500">
-              <CardTitle className="font-heading text-xl font-semibold group-hover:text-purple-600 dark:group-hover:text-purple-300 transition-colors duration-300">
+            <CardHeader className="p-4 group-hover:bg-gradient-to-r group-hover:from-[#1a1a1a] group-hover:to-[#111111] transition-all duration-500">
+              <CardTitle className="font-heading text-xl font-semibold text-[#EDEADE] group-hover:text-[#C6A667] transition-colors duration-300">
               SOLARE — Luxury Jewelry Shopping Experience
               </CardTitle>
             </CardHeader>
             <CardContent className="flex-grow p-4 pt-0">
-              <CardDescription className="text-gray-600 dark:text-gray-300">
+              <CardDescription className="text-[#8D8D8D]">
               SOLARE is a premium jewelry shopping app designed to bring elegance, emotion, and modern technology into one seamless experience. The goal was to create a refined, intuitive, and immersive mobile journey where users can discover handcrafted pieces, try them on virtually, and complete purchases with confidence.              </CardDescription>
             </CardContent>
             <CardFooter className="flex justify-between items-center gap-3 p-4 pt-0">
-              <p className="text-xs text-gray-500 dark:text-gray-400">
+              <p className="text-xs text-[#8D8D8D]">
                 Tools: Figma · Prototyping · User Flows
               </p>
               <a
@@ -539,7 +522,7 @@ function ProjectsCarousel({ activeTab }) {
                 rel="noopener noreferrer"
                 className="group/btn"
               >
-                <Button className="bg-purple-600 text-white hover:bg-purple-700 transition-all duration-300 group-hover/btn:scale-105 group-hover/btn:shadow-lg">
+                <Button className="bg-gradient-to-r from-[#C6A667] to-[#b18a49] text-[#0D0D0D] hover:from-[#E0C27B] hover:to-[#C6A667] transition-all duration-300 group-hover/btn:scale-105 group-hover/btn:shadow-lg">
                 Explore the Design
                 </Button>
               </a>

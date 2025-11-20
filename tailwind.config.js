@@ -11,23 +11,23 @@ module.exports = {
         'sans': ['Mozilla Headline', 'system-ui', 'sans-serif'],
       },
       colors: {
-        primary: '#000', // Twitter blue
-        'primary-dark': '#000', // Darker shade for dark mode
-        'primary-light': '#000', // Lighter shade for light mode
+        primary: '#C6A667',
+        'primary-dark': '#8D8D8D',
+        'primary-light': '#EDEADE',
       },
       backgroundColor: {
-        'primary': '#D3D0E3',
-        'primary-dark': '#0d8ecf', // Darker shade for dark mode
-        'primary-light': '#a0d8f0', // Lighter shade for light mode
+        'primary': '#0D0D0D',
+        'primary-dark': '#1A1A1A',
+        'primary-light': '#242424',
       },
       boxShadow: {
         'custom-light': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
-        'custom-dark': '0 4px 6px -1px rgba(255, 255, 255, 0.1), 0 2px 4px -1px rgba(255, 255, 255, 0.06)',
+        'custom-dark': '0 4px 12px rgba(14, 165, 233, 0.3)',
       },
       textColor: {
-        'primary': '#000', // Twitter blue
-        'primary-dark': '#0d8ecf', // Darker shade for dark mode
-        'primary-light': '#a0d8f0', // Lighter shade for light mode
+        'primary': '#EDEADE',
+        'primary-dark': '#8D8D8D',
+        'primary-light': '#C6A667',
       },
     },
   },

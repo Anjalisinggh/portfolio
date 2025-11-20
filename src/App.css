@@ -5,13 +5,112 @@ body {
   overflow-x: hidden; 
   width: 100%;
   font-family: 'Poppins', sans-serif;
-/*background-image: linear-gradient(to left bottom, #132e4b, #1b3954, #23445e, #2d4f67, #375b70);*/
+  cursor: url('https://sweezy-cursors.com/cursor/jujutsu-kaisen-satoru-gojo-infinity-animated/'), auto;
+  background-color: #0D0D0D;
+  color: #EDEADE;
 }
 html {
   scroll-behavior: smooth;
 }
 .App{
   overflow-x: hidden; 
+}
+.animated-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  background: radial-gradient(circle at top, rgba(32, 32, 32, 0.7), rgba(13, 13, 13, 0.95));
+}
+.crowd-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.9;
+}
+.animated-bg .blob {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  filter: blur(40px);
+  opacity: 0.5;
+  mix-blend-mode: screen;
+  animation: orbit 18s linear infinite;
+}
+.animated-bg .blob-1 {
+  top: -10%;
+  left: -10%;
+  background: #C6A667;
+  animation-duration: 22s;
+}
+.animated-bg .blob-2 {
+  top: 20%;
+  right: -15%;
+  background: #EDEADE;
+  animation-duration: 25s;
+}
+.animated-bg .blob-3 {
+  bottom: -10%;
+  left: 10%;
+  background: #8D8D8D;
+  animation-duration: 20s;
+}
+.animated-bg .blob-4 {
+  top: 35%;
+  left: 30%;
+  background: #C6A667;
+  animation-duration: 30s;
+}
+.animated-bg .blob-5 {
+  bottom: 5%;
+  right: 5%;
+  background: #EDEADE;
+  animation-duration: 26s;
+}
+.animated-bg .blob-6 {
+  top: -15%;
+  right: 15%;
+  background: #8D8D8D;
+  animation-duration: 24s;
+}
+.animated-bg .blob-7 {
+  bottom: 25%;
+  left: -5%;
+  background: #C6A667;
+  animation-duration: 28s;
+}
+.animated-bg .blob-8 {
+  top: 10%;
+  right: 40%;
+  background: #EDEADE;
+  animation-duration: 32s;
+}
+
+@keyframes orbit {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.35;
+  }
+  25% {
+    transform: translate3d(50px, -80px, 0) scale(1.2);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate3d(-60px, 60px, 0) scale(0.85);
+    opacity: 0.4;
+  }
+  75% {
+    transform: translate3d(80px, 40px, 0) scale(1.1);
+    opacity: 0.55;
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.35;
+  }
 }
 /* Navbar Styling */
 .navbar {
@@ -22,7 +121,7 @@ html {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-background-image: radial-gradient(circle, #5f6368, #4a4c50, #363739, #222224, #0e0e0e);
+  background-image: radial-gradient(circle at top, rgba(24,24,24,0.9), rgba(13,13,13,0.95));
 }
 .container {
   width: 100%;
@@ -38,19 +137,19 @@ background-image: radial-gradient(circle, #5f6368, #4a4c50, #363739, #222224, #0
   font-weight: bold;
   margin-right: 20px;
   font-size: 1.2rem;
-  color: #e9e0e0;
+  color: #EDEADE;
 }
 
 .navbar-right {
   display: flex;
   gap: 1rem;
-  color: #000;
+  color: #8D8D8D;
   
 }
 
 .nav-link {
   text-decoration: none;
-  color: #d3d0da;
+  color: #8D8D8D;
   padding: 0.5rem;
   transition: color 0.3s ease, border-bottom 0.3s ease;
   position: relative;
@@ -58,8 +157,8 @@ background-image: radial-gradient(circle, #5f6368, #4a4c50, #363739, #222224, #0
 
 .nav-link.active {
   font-weight: bold;
-  color: #e2dfe4;
-  border-bottom: 2px solid #eceaed;
+  color: #C6A667;
+  border-bottom: 2px solid #C6A667;
 }
 
 /* Hamburger Menu */
@@ -89,7 +188,7 @@ background-image: radial-gradient(circle, #5f6368, #4a4c50, #363739, #222224, #0
     display: none;
     flex-direction: column;
     align-items: flex-start;
-    background-image: radial-gradient(circle, #5f6368, #4a4c50, #363739, #222224, #0e0e0e);
+    background-image: radial-gradient(circle, #1A1A1A, #0D0D0D);
     position: absolute;
     top: 60px;
     right: 20px;
@@ -138,7 +237,7 @@ background-image: radial-gradient(circle, #5f6368, #4a4c50, #363739, #222224, #0
 .svg {
   display: flex;
   gap: 15px;
-  background-color: #353c45;
+  background-color: rgba(26,26,26,0.9);
   border-radius: 10px;
   padding: 7px;
   
@@ -160,7 +259,7 @@ background-image: radial-gradient(circle, #5f6368, #4a4c50, #363739, #222224, #0
   justify-content: center;
   opacity: 0;
   font-size: 2rem;
-  color: #ebd8d8;
+  color: #EDEADE;
   margin-top: 20px;
   transition: all 0.5s ease-in-out;
 }
@@ -191,18 +290,18 @@ background-image: radial-gradient(circle, #5f6368, #4a4c50, #363739, #222224, #0
     75% 95%, 25% 95%,
     0% 50%
   );
-  border: 5px solid #2d2f2e;
-  box-shadow: 0 0 15px #313131;
+  border: 5px solid #1A1A1A;
+  box-shadow: 0 0 25px rgba(198,166,103,0.4);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
 }
 
 .profile-image:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 25px #8e677a;
+  box-shadow: 0 0 35px rgba(198,166,103,0.6);
 }
 .content-text {
   flex: 1;
-  color: #e9e0e0;
+  color: #8D8D8D;
   text-align: center;
   font-size: 1.2rem;
   line-height: 1.6;
@@ -213,8 +312,8 @@ background-image: radial-gradient(circle, #5f6368, #4a4c50, #363739, #222224, #0
 
 .download-btn {
   display: inline-block; /* <-- needed for transform to work */
-  background-image: radial-gradient(circle, #5f6368, #4a4c50, #363739, #222224, #0e0e0e);
-  color: white;
+  background-image: linear-gradient(90deg, #C6A667, #b18a49);
+  color: #0D0D0D;
   
  padding: 0.2rem 1rem;
   border-radius: 0.6rem;
@@ -228,11 +327,11 @@ background-image: radial-gradient(circle, #5f6368, #4a4c50, #363739, #222224, #0
 
 .download-btn:hover {
   transform: scale(1.1); 
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 18px rgba(198, 166, 103, 0.35);
   transition: all 0.3s ease-in-out;
-  color: #000000;
-  font-weight: 450;
-  background-image: radial-gradient(circle, #8f959d, #777e86, #60676f, #4a515a, #353c45);
+  color: #EDEADE;
+  font-weight: 500;
+  background-image: linear-gradient(90deg, #0ea5e9, #8b5cf6);
 }
 
 
@@ -280,6 +379,7 @@ background-image: radial-gradient(circle, #5f6368, #4a4c50, #363739, #222224, #0
 
   align-items: center;
   padding: 10px 40px;
+  background-color: #020617;
 }
 
 .about-content {
@@ -294,13 +394,13 @@ background-image: radial-gradient(circle, #5f6368, #4a4c50, #363739, #222224, #0
 
 .profile-info {
   flex: 1;
-  color: aliceblue; /* changed to white for better contrast */
+  color: #EDEADE;
 }
 
 .profile-info h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color: antiquewhite; /* Changed to a lighter color for better visibility */
+  color: #EDEADE;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   font-weight: 600;
   text-align: center; /* Centered the heading */
@@ -322,10 +422,10 @@ background-image: radial-gradient(circle, #5f6368, #4a4c50, #363739, #222224, #0
 
 .gif {
   width: 50%;
-  background-color: #afbdd0;
+  background-color: #121212;
   height: 60%;
   border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 40px rgba(198,166,103,0.2);
 }
 
 /* ✅ Corrected media query for responsiveness */
@@ -358,26 +458,26 @@ background-image: radial-gradient(circle, #5f6368, #4a4c50, #363739, #222224, #0
 }
 
 .card {
-  background: #eae6e6 !important;
+  background: #111111 !important;
   border-radius: 1rem ;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
-  border: 1px solid #e5dbdb;
+  border: 1px solid rgba(38, 38, 38, 0.8);
 }
 
 .card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 28px rgba(152, 116, 116, 0.15);
+  box-shadow: 0 12px 30px rgba(198, 166, 103, 0.25);
 }
 
 .card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid rgba(74, 74, 74, 0.6);
 }
 
 .card-body {
@@ -391,27 +491,27 @@ background-image: radial-gradient(circle, #5f6368, #4a4c50, #363739, #222224, #0
 .card-title {
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
-  color: #050412;
+  color: #EDEADE;
   font-weight: 600;
 }
 
 .section h2 {
   font-size: 2rem;
-  color: rgb(233, 229, 225);
+  color: #EDEADE;
   margin-bottom: 0.5rem;
 }
 
 .card-text {
   font-size: 0.95rem;
-  color: #433f3f;
+  color: #8D8D8D;
   margin-bottom: 1rem;
   flex-grow: 1;
   line-height: 1.5;
 }
 
 .btn {
-  background-image: radial-gradient(circle, #5f6368, #4a4c50, #363739, #222224, #0e0e0e);
-  color: white;
+  background-image: linear-gradient(120deg, #C6A667, #b18a49);
+  color: #0D0D0D;
   padding: 0.6rem 1.2rem;
   border: none;
   border-radius: 0.6rem;
@@ -422,7 +522,7 @@ background-image: radial-gradient(circle, #5f6368, #4a4c50, #363739, #222224, #0
 }
 
 .btn:hover {
-  background-image: radial-gradient(circle, #8f959d, #777e86, #60676f, #4a515a, #353c45);
+  background-image: linear-gradient(120deg, #E0C27B, #C6A667);
 }
 
 /* 📱 Responsive: Stack to 1 or 2 cards on smaller screens */
@@ -480,16 +580,16 @@ background-image: radial-gradient(circle, #5f6368, #4a4c50, #363739, #222224, #0
 
 .contact-container h2 {
   font-size: 2rem;
-  color: antiquewhite;
+  color: #EDEADE;
   margin-bottom: 0.5rem;
 }
 
 .contact-container p {
-  color: #fff;
+  color: #8D8D8D;
   margin-bottom: 1.5rem;
-background-image: radial-gradient(circle, #5f6368, #4a4c50, #363739, #222224, #0e0e0e);  color: #fffcfc;
-padding: auto;
-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+background-image: radial-gradient(circle, #1A1A1A, #0D0D0D);
+padding: 1rem;
+box-shadow: inset 0 0 30px rgba(198, 166, 103, 0.15);
 }
 
 .contact-icons {
@@ -526,8 +626,8 @@ box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
   bottom: -35px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #f4e0e0;
-  color: #0e0d0d;
+  background-color: #111111;
+  color: #EDEADE;
   padding: 5px 10px;
   font-size: 0.75rem;
   white-space: nowrap;
