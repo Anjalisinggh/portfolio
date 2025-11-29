@@ -219,3 +219,6 @@ export default function CrowdCanvas({ src, rows = 15, cols = 7, className = "" }
 }
 
 
+
+
+
