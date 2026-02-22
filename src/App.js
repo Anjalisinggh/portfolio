@@ -245,32 +245,34 @@ export default function HomePage() {
               About Me
             </h2>
             <div className="space-y-4 animate-fade-in-up animation-delay-500">
-              <p className="max-w-[600px] text-lg text-white/80 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Hi, I'm <strong className="text-[#4FC3F7]">Anjali Singh</strong>, a web developer and UI
-                designer from Mumbai, recently graduated with a BSc in IT. I love
-                crafting creative, user-focused digital experiences.
-              </p>
-              <p className="max-w-[600px] text-lg text-white/80 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                From developing an AR-based earring try-on app (
-                <strong className="text-[#4FC3F7]">Kaizen Arts</strong>) to building emotion-driven platforms
-                like <strong className="text-white">Museek</strong> and <strong className="text-[#4FC3F7]">Vibra</strong>, I bring
-                ideas to life through clean code and expressive design. I've also
-                gained hands-on experience at{" "}
-                <strong className="text-[#4FC3F7]">International Business Machines (IBM)</strong> as a
-                front-end intern.
-              </p>
-              <p className="max-w-[600px] text-lg text-white/80 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Skilled in <strong className="text-white">Kotlin</strong>, <strong className="text-[#4FC3F7]">JavaScript</strong>,{" "}
-                <strong className="text-white">React</strong>, <strong className="text-[#4FC3F7]">Android Development</strong>, and{" "}
-                <strong className="text-white">Figma</strong>. I'm always exploring new technologies to
-                build meaningful and user-centric digital experiences.
-              </p>
-            </div>
+  <p className="max-w-[600px] text-lg text-white/80 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+    Hi, I'm <strong className="text-[#4FC3F7]">Anjali Singh</strong>, a web developer and UI designer from Mumbai with a BSc in IT. I build user-focused digital experiences that blend clean design with functional code.
+  </p>
+
+  <p className="max-w-[600px] text-lg text-white/80 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+    I’ve worked as a Front-End Intern at{" "}
+    <strong className="text-[#4FC3F7]">
+      International Business Machines (IBM)
+    </strong>{" "}
+    and as a UI/UX Designer & Front-End Developer at{" "}
+    <strong className="text-white">WeSee</strong>, creating responsive web and mobile interfaces and transforming Figma designs into scalable{" "}
+    <strong className="text-[#4FC3F7]">React</strong> and{" "}
+    <strong className="text-white">Next.js</strong> applications.
+  </p>
+
+  <p className="max-w-[600px] text-lg text-white/80 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+    Skilled in <strong className="text-white">Kotlin</strong>,{" "}
+    <strong className="text-[#4FC3F7]">JavaScript</strong>,{" "}
+    <strong className="text-white">React</strong>,{" "}
+    <strong className="text-[#4FC3F7]">Android Development</strong>, and{" "}
+    <strong className="text-white">Figma</strong>.
+  </p>
+</div>
           </div>
           <div className="flex justify-center animate-fade-in-up animation-delay-700">
             <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-r from-[#4FC3F7]/20 via-[#64B5F6]/15 to-[#4FC3F7]/20 rounded-xl blur-xl opacity-60 group-hover:opacity-80 transition-all duration-500"></div>
-              <img src="/astro.png" alt="astro" className="relative h-auto max-h-[450px] w-full max-w-[650px] rounded-xl object-cover shadow-2xl ring-2 ring-[#4FC3F7]/20 group-hover:ring-4 group-hover:ring-[#4FC3F7]/40 transition-all duration-500 group-hover:scale-105" />
+        
+              <img src="/ai.webp" alt="astro" className="relative h-auto max-h-[450px] w-full max-w-[650px] hover:scale-105 transition-all duration-500" />
             </div>
           </div>
         </div>
