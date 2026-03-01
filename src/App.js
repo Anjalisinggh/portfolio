@@ -4,7 +4,7 @@ import {
   Github,
   Instagram,
   Linkedin,
-  Mail,
+ 
   ArrowRight,
   ArrowLeft,
   X
