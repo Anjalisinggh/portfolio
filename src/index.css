@@ -64,4 +64,22 @@
       transform: translateY(0);
     }
   }
+  
+  /* Marquee for repeating text pattern - cinematic */
+  .marquee-row {
+    user-select: none;
+  }
+  
+  .marquee-track {
+    animation: marquee 50s linear infinite;
+  }
+  
+  .marquee-reverse .marquee-track {
+    animation-direction: reverse;
+  }
+  
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
 }
