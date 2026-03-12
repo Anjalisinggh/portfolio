@@ -292,23 +292,37 @@ export default function HomePage() {
             </a>
             
             <a
-  href="https://x.com/anjalisinggh12?t=7C4F4VoZQBtreAbIsOFFYg&s=08"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="group flex flex-col items-center gap-1 sm:gap-2 text-white/70 transition-all duration-300 hover:text-[#a3e635] hover:scale-110"
->
-  <svg
-    viewBox="0 0 24 24"
-    className="h-7 w-7 sm:h-8 sm:w-8 md:h-9 md:w-9 transition-transform group-hover:scale-110 group-hover:rotate-12"
-    aria-hidden="true"
-  >
-    <path
-      d="M4 3h4.2L12 8.2 15.8 3H20l-6 9 6 9h-4.2L12 15.8 8.2 21H4l6-9L4 3z"
-      fill="currentColor"
-    />
-  </svg>
-  <span className="text-xs sm:text-sm font-medium">X</span>
-</a>
+              href="https://x.com/anjalisinggh12?t=7C4F4VoZQBtreAbIsOFFYg&s=08"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex flex-col items-center gap-1 sm:gap-2 text-white/70 transition-all duration-300 hover:text-[#a3e635] hover:scale-110"
+            >
+              <svg
+                viewBox="0 0 48 48"
+                className="h-7 w-7 sm:h-8 sm:w-8 md:h-9 md:w-9 transition-transform group-hover:scale-110 group-hover:rotate-12"
+                aria-hidden="true"
+              >
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M23.5 26.5L9.92884 42H6.21484L21.5 24L23.5 26.5Z"
+                  fill="currentColor"
+                />
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M37.2868 6L24 21L26 24L40.9998 6H37.2868Z"
+                  fill="currentColor"
+                />
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M15.7239 9L36.3019 39H32.1959L11.6179 9H15.7239ZM17.3039 6H5.92188L30.6159 42H41.9979L17.3039 6Z"
+                  fill="currentColor"
+                />
+              </svg>
+              <span className="text-xs sm:text-sm font-medium">X</span>
+            </a>
             <a
               href="https://www.behance.net/anjaliisingh"
               target="_blank"
