@@ -7,7 +7,7 @@ import {
  
   ArrowRight,
   ArrowLeft,
-  X
+ 
 } from "lucide-react"
 import { motion } from "framer-motion"
 import { ScrollReveal } from "./components/ScrollReveal"
